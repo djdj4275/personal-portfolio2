@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+  }
+  .home {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+  }
+  #btn1 {
+    display: none;
+  }
+  #btn2 {
+    display: none;
+  }
+  #btn3 {
+    display: none;
+  }
+  #page1 {
+    background-image: url(../assets/2.jpg);
+    background-size: cover;
+    z-index: 1;
+  }
+  #page2 {
+    z-index: 9;
+  }
+  #page3 {
+    z-index: 8;
+  }
+  #page4 {
+    z-index: 7;
+  }
+  #page5 {
+    z-index: 6;
+  }
+  #page6 {
+    z-index: 5;
+  }
+  #page7{
+    z-index: 4;
+  }
+  #page8{
+    z-index: 3;
+  }
+  .nbtn-front {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border : 1px solid black;
+    border-radius: 50%;
+    right: 5%;
+    top: 45%;
+    text-align: center;
+    background-color: #000099;
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.3s;
+    color: white;
+  }
+  .nbtn-back {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border : 1px solid black;
+    border-radius: 50%;
+    left: 5%;
+    top: 45%;
+    text-align: center;
+    background-color: #000099;
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.3s;
+    color: white;
+  }
+  .nbtn-front:hover {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+    right: 40px;
+  }
+  .nbtn-back:hover {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+    left: 40px;
+  }
+  .line {
+    position: absolute;
+    top: 48%;
+    width: 60px;
+    border: 1px solid black;
+    z-index: -1;
+  }
+  .front {
+    right: 0;
+  }
+  .back {
+    left: 0;
+  }
+  #book {
+    margin: auto;
+    position: relative;
+    top: 35%;
+    width: 1200px;
+    height: 500px;
+    perspective: 2000px;
+    box-shadow: 0px 40px 35px black;
+  }
+  .firstpage {
+    right : 50%;
+    position: absolute;
+    background-color: white;
+    width: 600px;
+    height: 100%;
+  }
+  .frontpage {
+    left: 50%;
+    position: absolute;
+    background-color: white;
+    width: 600px;
+    height: 100%;
+    transform-origin: left center;
+    transition-duration: 1.5s;
+    backface-visibility: hidden;
+  }
+  .backpage {
+    right : 50%;
+    position: absolute;
+    background-color: white;
+    width: 600px;
+    height: 100%;
+    transform-origin: right center;
+    transform: rotateY(180deg);
+    transition-duration: 1.5s;
+  }
+  
+  #btn1:checked + input + input + div + #page2{
+    transform: rotateY(-180deg);
+    opacity: 1;
+  }
+  
+  #btn1:checked + input + input + div + div + #page3{
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  
+  #btn2:checked + input + div + div + div + #page4{
+    transform: rotateY(-180deg);
+    opacity: 1;
+  }
+  
+  #btn2:checked + input + div + div + div + div + #page5{
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  
+  #btn2:checked + input + div + div + #page3 {
+    z-index: 1;
+  }
+  
+  #btn3:checked + div + div + div + div + div + #page6{
+    transform: rotateY(-180deg);
+    opacity: 1;
+  }
+  
+  #btn3:checked + div + div + div + div + div + div + #page7{
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  
+  #btn3:checked + div + div + div + div + #page5 {
+    z-index: 2;
+  }
+  
+  

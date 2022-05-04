@@ -15,7 +15,6 @@
   #app {
     width : 100%;
     height: 100%;
-    background-size: cover;
   }
 </style>
 
@@ -29,7 +28,7 @@ export default {
   computed : {
     background() {
     if (this.checkhome) {
-      return "url("+require("./assets/coffeebook.jpg")+")";
+      return "url("+require("./assets/8.jpg")+")";
     }
     else {
       return "#000000";
