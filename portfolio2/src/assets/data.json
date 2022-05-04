@@ -1,0 +1,66 @@
+[
+    {
+        "accessary" : "maison margiela",
+        "outer" : "noirer",
+        "top" : "noirer",
+        "bottom" : "luire",
+        "shoes" : "saint laurent",
+        "src" : "사진/KakaoTalk_20220422_124144416_01 (2).jpg"
+    },
+    {
+        "accessary" : "saint laurent",
+        "outer" : "dbel",
+        "top" : "noirer",
+        "bottom" : "dbel",
+        "shoes" : "saint laurent",
+        "src" : "사진/KakaoTalk_20220422_124144416_02 (2).jpg"
+    },
+    {
+        "accessary" : "wooalong",
+        "outer" : "*",
+        "top" : "noirer",
+        "bottom" : "luire",
+        "shoes" : "vatoz",
+        "src" : "사진/KakaoTalk_20220422_124144416_03 (2).jpg"
+    },
+    {
+        "accessary" : "cozyness",
+        "outer" : "*",
+        "top" : "noirer",
+        "bottom" : "dbel",
+        "shoes" : "saint laurent",
+        "src" : "사진/KakaoTalk_20220422_124144416_04 (2).jpg"
+    },
+    {
+        "accessary" : "ader error",
+        "outer" : "*",
+        "top" : "*",
+        "bottom" : "luire",
+        "shoes" : "balenciage",
+        "src" : "사진/KakaoTalk_20220422_124144416_05 (2).jpg"
+    },
+    {
+        "accessary" : "maison margiela",
+        "outer" : "*",
+        "top" : "tiwilltang",
+        "bottom" : "dbel",
+        "shoes" : "soulesures",
+        "src" : "사진/KakaoTalk_20220422_124144416_06 (2).jpg"
+    },
+    {
+        "accessary" : "yproject",
+        "outer" : "deepindive",
+        "top" : "dbel",
+        "bottom" : "luire",
+        "shoes" : "humant",
+        "src" : "사진/KakaoTalk_20220422_124144416_07 (2).jpg"
+    },
+    {
+        "accessary" : "*",
+        "outer" : "tiwilltang",
+        "top" : "sowool",
+        "bottom" : "anderssonbell",
+        "shoes" : "lostgarden",
+        "src" : "사진/KakaoTalk_20220422_124144416_08 (2).jpg"
+    }
+]
