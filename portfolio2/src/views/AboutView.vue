@@ -3,10 +3,10 @@
 
     <div class="search-wrapper" :class="{active : this.bt}">
       <div class="input-holder">
-          <input type="text" class="search-input" placeholder="Type to search" />
-          <button class="search-icon" @click="bt = true"><span></span></button>
+          <input type="text" class="search-input" placeholder="Type to search" v-model="text">
+          <button class="search-icon" @click="bt = !bt"><span></span></button>
       </div>
-      <span class="close" @click="bt = false"></span>
+      <span class="close" @click="search"></span>
     </div>
 
     <!-- flip-card-container -->
@@ -63,8 +63,22 @@ export default {
   data() {
     return {
       infor1 : infor,
-      search : "",
+      text : "",
       bt : false
+    }
+  },
+  methods : {
+    search() {
+      let textsearch = this.infor1.filter( 
+        (item)=>{
+          for (let i in item) {
+            if (item[i].match(this.text)) {
+              return true;
+            }
+          }
+          return false;
+      });
+      this.infor1 = textsearch;
     }
   }
 }
