@@ -15,18 +15,9 @@
 
         <div class="card-front">
           <figure>
-            <div class="img-bg"></div>
             <img :src="require(`../assets/${m.src}`)">
             <figcaption>Codi Set</figcaption>
           </figure>
-
-          <ul >
-            <li>Accessary : {{m.accessary}}</li>
-            <li>Outer : {{m.outer}}</li>
-            <li>Top : {{m.top}}</li>
-            <li>Bottom : {{m.bottom}}</li>
-            <li>Shoes : {{m.shoes}}</li>
-          </ul>
         </div>
 
         <div class="card-back">
@@ -35,7 +26,15 @@
             <img :src="require(`../assets/${m.src}`)">
           </figure>
 
-          <button>Book</button>
+          <button>Hold</button>
+
+          <ul class="cloth">
+            <li>Accessary : {{m.accessary}}</li>
+            <li>Outer : {{m.outer}}</li>
+            <li>Top : {{m.top}}</li>
+            <li>Bottom : {{m.bottom}}</li>
+            <li>Shoes : {{m.shoes}}</li>
+          </ul>
 
           <div class="design-container">
             <span class="design design--1"></span>
@@ -44,8 +43,6 @@
             <span class="design design--4"></span>
             <span class="design design--5"></span>
             <span class="design design--6"></span>
-            <span class="design design--7"></span>
-            <span class="design design--8"></span>
           </div>
         </div>
 
