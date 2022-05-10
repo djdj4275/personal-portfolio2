@@ -5,7 +5,167 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+  overflow-x: hidden;
+  min-height: 200vh;
+  background: #161312;
+}
+
+header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid rgba(120,120,120,0.1);
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -5px;
+  right: -20px;
+  bottom: -5px;
+  left: -20px;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(2px);
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.brand img {
+  width: auto;
+  height: 35px;
+}
+
+
+/* 스위치 --------------------------------------------------------------- */
+.switcher {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+/* 스위치 커스텀 디자인 */
+.switcher.is-orange input + label::after {
+  transform: translateY(-0.5px);
+}
+
+.switcher.is-orange input:checked + label::before {
+  box-shadow: inset 0 0 0 2em #fe7c01;
+}
+
+.switcher.is-orange input:checked:focus + label::before {
+  border: 1px solid #ae3c01;
+}
+
+
+/* 앨범 리스트 ----------------------------------------------------------- */
+.album-list {
+  width: 100%;
+  min-width: 400px;
+  max-width: 1200px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding-left: 0;
+}
+
+.album-list::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@media (max-width: 1199px) {
+  .album-list {
+    width: 800px;
+  }
+}
+
+@media (max-width: 799px) {
+  .album-list {
+    width: 400px;
+  }
+}
+
+
+/* 앨범 카드 ------------------------------------------------------------- */
+.album-card {
+  cursor: pointer;
+  float: left;
+  width: 340px;
+  height: 340px;
+  margin: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.album-card:hover {
+  box-shadow: 0 0 0 1px #ff6a03, 0 0 40px 5px hsla(25, 100%, 51%, 0.3);
+}
+
+.album-card * {
+  width: inherit;
+  height: inherit;
+  transition: all 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.5s;
+}
+
+
+/* 앨범 플레이어 ---------------------------------------------------------- */
+.album-player {
+  border: none;
+}
+    </style>
 </head>
 <body>
+
+    <header>
+        <a class="brand" href="//soundcloud.com/" target="_blank">
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/soundcloud-icon-1.svg"
+            alt="Sound Cloud">
+        </a>
+        <div class="switcher is-orange is-xsmall" title="앨범 플레이어 보기">
+          <input id="album-player-show" type="checkbox">
+          <label for="album-player-show" aria-label="앨범 플레이어 보기"></label>
+        </div>
+      </header>
+      
+      <ul class="album-list">
+        <li class="album-card">
+          <img
+            class="album-cover" 
+            src="//i1.sndcdn.com/artworks-000283850588-jz5ywm-t500x500.jpg"
+            alt="Tobu - Calling"
+            width="340" height="340">
+          <iframe class="album-player" src="//goo.gl/syBGn1"></iframe>
+        </li>
+      </ul>
+
 </body>
+
+<script>
+    var album_list = document.querySelector('.album-list');
+var album_player_show = document.querySelector('#album-player-show');
+
+album_player_show.addEventListener('change', function(){
+  if ( this.checked ) {
+    album_list.classList.add('all-view-albums');
+  } else {
+    album_list.classList.remove('all-view-albums');
+  }
+});
+</script>
+
 </html>
