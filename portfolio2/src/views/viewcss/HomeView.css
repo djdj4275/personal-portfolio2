@@ -169,7 +169,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url(../assets/12.jpg);
+    background-image: url(../../assets/12.jpg);
     z-index: 10;
   }
   .content-right {
@@ -177,7 +177,7 @@
     width: 200%;
     height: 100%;
     left: -100%;
-    background-image: url(../assets/12.jpg);
+    background-image: url(../../assets/12.jpg);
     z-index: 5;
   }
   

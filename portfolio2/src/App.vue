@@ -28,7 +28,7 @@ export default {
   computed : {
     background() {
     if (this.checkhome) {
-      return "url("+require("./assets/8.jpg")+")";
+      return "url("+require("./assets/11.jpg")+")";
     }
     else {
       return "#000000";
