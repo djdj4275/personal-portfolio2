@@ -3,7 +3,7 @@
     <nav>
       <router-link to="/" @click.native="checkhome = true">Home</router-link> |
       <router-link to="/about" @click.native="checkhome = false">About</router-link> |
-      <router-link to="/page" @click.native="checkhome = false">Page</router-link> |
+      <router-link to="/page" @click.native="checkhome = true">Page</router-link> |
       <router-link to="/test" @click.native="checkhome = false">Test</router-link>
     </nav>
 
