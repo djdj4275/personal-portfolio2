@@ -70,12 +70,12 @@
                     <li></li>
                 </ul>
                 <div class="social">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
+                    <button @click="facebook"><font-awesome-icon :icon="{ prefix: 'fab', iconName: 'facebook' }"/></button>
+                    <font-awesome-icon icon="fa-solid fa-location-dot" />
+                    <font-awesome-icon :icon="{ prefix: 'fab', iconName: 'instagram' }"/>
                     <i class="fab fa-github"></i>
                 </div>
-                <button></button>
+                <button class="circle"></button>
             </div>
         </div>
     </div>
@@ -83,7 +83,13 @@
 
 <script>
 export default {
-    
+    data () {
+    },
+    methods : {
+      facebook() {
+        window.open('https://naver.com')
+      }
+    }
 }
 </script>
 
@@ -223,6 +229,7 @@ body {
   width: 180px;
   height: 64px;
   border-radius: 80px;
+  z-index: 10000;
 }
 .container .card .social i:nth-of-type(1) {
   -webkit-transition-delay: 0.4s;
@@ -245,7 +252,7 @@ body {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.container .card button {
+.container .card .circle {
   position: absolute;
   right: 14px;
   bottom: 14px;
@@ -262,7 +269,7 @@ body {
 .container .card button i {
   font-size: 3rem;
 }
-.container .card:hover button {
+.container .card:hover .circle {
   transform: scale(16.5);
 }
 .container .card:hover p {

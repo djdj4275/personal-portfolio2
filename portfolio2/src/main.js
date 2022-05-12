@@ -4,12 +4,14 @@ import router from './router'
 import store from './store'
 
 import { library } from '@fortawesome/fontawesome-svg-core' 
-import { faHeart, 
+import { 
+  faHeart, 
   faCirclePause, 
   faCirclePlay, 
   faArrowUpRightFromSquare, 
   faForwardStep,
-  faBackwardStep
+  faBackwardStep,
+  faLocationDot
   }
   from '@fortawesome/free-solid-svg-icons' 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -20,10 +22,19 @@ library.add(
   faCirclePlay, 
   faArrowUpRightFromSquare,
   faForwardStep,
-  faBackwardStep
+  faBackwardStep,
+  faLocationDot
   )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.config.productionTip = false
+
+import {
+  faFacebook,
+  faInstagram
+  } from '@fortawesome/free-brands-svg-icons'
+library.add(
+  faFacebook,
+  faInstagram
+  )
 
 Vue.config.productionTip = false
 
