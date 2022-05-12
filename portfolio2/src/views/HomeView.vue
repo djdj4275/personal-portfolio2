@@ -82,8 +82,7 @@
 
 </template>
 
-<style scoped>
-@import "./viewcss/HomeView.css";
+<style scoped src="./viewcss/HomeView.css">
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 </style>
 

@@ -89,8 +89,7 @@
     </div>
 </template>
 
-<style scoped>
-@import "./viewcss/PageView.css";
+<style scoped src="./viewcss/PageView.css">
 </style>
 
 <script>

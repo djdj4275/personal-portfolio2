@@ -81,7 +81,6 @@ export default {
 }
 </script>
 
-<style scoped>
-@import "./viewcss/AboutView.css";
+<style scoped src="./viewcss/AboutView.css">
 </style>
 
