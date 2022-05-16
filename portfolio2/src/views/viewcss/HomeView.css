@@ -123,12 +123,12 @@
     margin: auto;
     width: 1200px;
     height: 300px;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Nanum Brush Script', cursive;
   }
   .typing {
     margin: auto;
-    top: 70px;
+    top: 120px;
     position: absolute;
     width: 1200px;
     height: 200px;

@@ -1,7 +1,5 @@
 .about {
     display: inline-block;
-    height: 2500px;
-    background-color: black;
   }
   
   .search-wrapper {
@@ -45,11 +43,11 @@
       transform: translate(0, 10px);
   }
   .search-wrapper .input-holder .search-icon {
-      width:50px;
-      height:50px;
+      width:40px;
+      height:40px;
       border:none;
       border-radius:6px;
-      background: black;
+      background: darkgray;
       padding:0px;
       outline:none;
       position: relative;
@@ -77,14 +75,14 @@
       width: 25px;
       height: 1px;
       top: 10px;
-      border: 2px solid purple;
+      border: 2px solid gold;
   }
   .search-wrapper.active .input-holder .search-icon span::before {
     width: 25px;
     height: 1px;
     top: 10px;
     left: 0;
-    border: 2px solid purple;
+    border: 2px solid gold;
     transform: rotate(-90deg);
   }
   .search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
@@ -97,7 +95,7 @@
       left: 9px;
       top: 18px;
       border-radius: 2px;
-      background: purple;
+      background: gold;
   }
   .search-wrapper .input-holder .search-icon span::after {
       width: 20px;
@@ -105,7 +103,7 @@
       left: 0px;
       top: 0px;
       border-radius: 16px;
-      border: 4px solid purple;
+      border: 4px solid gold;
   }
   .search-wrapper .close {
       position: absolute;
@@ -137,7 +135,7 @@
     left: 9px;
     top: 18px;
     border-radius: 2px;
-    background: purple;
+    background: gold;
   }
   .search-wrapper .close::after {
     width: 20px;
@@ -145,7 +143,7 @@
     left: 0px;
     top: 0px;
     border-radius: 16px;
-    border: 4px solid purple;
+    border: 4px solid gold;
   }
   *,
   *::after,

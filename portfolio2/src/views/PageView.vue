@@ -1,91 +1,105 @@
 <template>
 <!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
     <div class="page">
-        <div class="wrapper" id="app">
+
+      <div class="wrapper" id="app">
         <div class="player">
-        <div class="player__top">
+
+          <div class="player__top">
+
             <div class="player-cover">
-            <transition-group :name="transitionName">
+
+              <transition-group :name="transitionName">
                 <div class="player-cover__item" v-if="i === currentTrackIndex" 
                 :style="{ backgroundImage: `url(${track.cover})` }"
                 v-for="(track, i) in tracks" :key="i"></div>
-            </transition-group>
-        </div>
-        <div class="player-controls">
-            <div class="player-controls__item -favorite" 
-            :class="{ active : currentTrack.favorited }" @click="favorite">
-                <svg class="icon">
-                <use xlink:href="#icon-heart-o"></use>
-                </svg>
-            </div>
-            <a :href="currentTrack.url" target="_blank" class="player-controls__item">
-                <svg class="icon">
-                <use xlink:href="#icon-link"></use>
-                </svg>
-            </a>
-            <div class="player-controls__item" @click="prevTrack">
-                <svg class="icon">
-                <use xlink:href="#icon-prev"></use>
-                </svg>
-            </div>
-            <div class="player-controls__item" @click="nextTrack">
-                <svg class="icon">
-                <use xlink:href="#icon-next"></use>
-                </svg>
-            </div>
-            <div class="player-controls__item -xl js-play" @click="play">
-                <svg class="icon">
-                <use xlink:href="#icon-pause" v-if="isTimerPlaying"></use>
-                <use xlink:href="#icon-play" v-else></use>
-                </svg>
-            </div>
-            </div>
-        </div>
-        <div class="progress" ref="progress">
-          <div class="progress__top">
-            <div class="album-info" v-if="currentTrack">
-              <div class="album-info__name">{{ currentTrack.artist }}</div>
-              <div class="album-info__track">{{ currentTrack.name }}</div>
-            </div>
-            <div class="progress__duration">{{ duration }}</div>
-          </div>
-          <div class="progress__bar" @click="clickProgress">
-            <div class="progress__current" :style="{ width : barWidth }"></div>
-          </div>
-          <div class="progress__time">{{ currentTime }}</div>
-        </div>
-        <div v-cloak></div>
-      </div>
-    </div>
+              </transition-group>
 
-    <svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
-      <defs>
-        <symbol id="icon-heart-o" viewBox="0 0 32 32">
-          <title>icon-heart-o</title>
-          <font-awesome-icon icon="fa-solid fa-heart" />
-        </symbol>
-        <symbol id="icon-pause" viewBox="0 0 32 32">
-          <title>icon-pause</title>
-          <font-awesome-icon icon="fa-solid fa-circle-pause" />
-        </symbol>
-        <symbol id="icon-play" viewBox="0 0 32 32">
-          <title>icon-play</title>
-          <font-awesome-icon icon="fa-solid fa-circle-play" />
-        </symbol>
-        <symbol id="icon-link" viewBox="0 0 32 32">
-        <title>link</title>
-          <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
-        </symbol>
-        <symbol id="icon-next" viewBox="0 0 32 32">
-          <title>next</title>
-          <font-awesome-icon icon="fa-solid fa-forward-step" />
-        </symbol>
-        <symbol id="icon-prev" viewBox="0 0 32 32">
-          <title>prev</title>
-          <font-awesome-icon icon="fa-solid fa-backward-step" />
-        </symbol>
-      </defs>
-    </svg>
+              <div class="player-cover__item_overlay">안녕하세요</div>
+
+            </div>
+
+            <div class="player-controls">
+              <div class="player-controls__item -favorite" 
+              :class="{ active : currentTrack.favorited }" @click="favorite">
+                  <svg class="icon">
+                  <use xlink:href="#icon-heart-o"></use>
+                  </svg>
+              </div>
+              <a :href="currentTrack.url" target="_blank" class="player-controls__item">
+                  <svg class="icon">
+                  <use xlink:href="#icon-link"></use>
+                  </svg>
+              </a>
+              <div class="player-controls__item" @click="prevTrack">
+                  <svg class="icon">
+                  <use xlink:href="#icon-prev"></use>
+                  </svg>
+              </div>
+              <div class="player-controls__item" @click="nextTrack">
+                  <svg class="icon">
+                  <use xlink:href="#icon-next"></use>
+                  </svg>
+              </div>
+              <div class="player-controls__item -xl js-play" @click="play">
+                  <svg class="icon">
+                  <use xlink:href="#icon-pause" v-if="isTimerPlaying"></use>
+                  <use xlink:href="#icon-play" v-else></use>
+                  </svg>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="progress" ref="progress">
+            <div class="progress__top">
+              <div class="album-info" v-if="currentTrack">
+                <div class="album-info__name">{{ currentTrack.artist }}</div>
+                <div class="album-info__track">{{ currentTrack.name }}</div>
+              </div>
+              <div class="progress__duration">{{ duration }}</div>
+            </div>
+            <div class="progress__bar" @click="clickProgress">
+              <div class="progress__current" :style="{ width : barWidth }"></div>
+            </div>
+            <div class="progress__time">{{ currentTime }}</div>
+          </div>
+
+          <div v-cloak></div>
+
+        </div>
+      </div>
+
+      <!-- 아이콘을 사용한 좋아요, 링크, next, prev -->
+      <svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <symbol id="icon-heart-o" viewBox="0 0 32 32">
+            <title>icon-heart-o</title>
+            <font-awesome-icon icon="fa-solid fa-heart" />
+          </symbol>
+          <symbol id="icon-pause" viewBox="0 0 32 32">
+            <title>icon-pause</title>
+            <font-awesome-icon icon="fa-solid fa-circle-pause" />
+          </symbol>
+          <symbol id="icon-play" viewBox="0 0 32 32">
+            <title>icon-play</title>
+            <font-awesome-icon icon="fa-solid fa-circle-play" />
+          </symbol>
+          <symbol id="icon-link" viewBox="0 0 32 32">
+          <title>link</title>
+            <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" />
+          </symbol>
+          <symbol id="icon-next" viewBox="0 0 32 32">
+            <title>next</title>
+            <font-awesome-icon icon="fa-solid fa-forward-step" />
+          </symbol>
+          <symbol id="icon-prev" viewBox="0 0 32 32">
+            <title>prev</title>
+            <font-awesome-icon icon="fa-solid fa-backward-step" />
+          </symbol>
+        </defs>
+      </svg>
+
     </div>
 </template>
 

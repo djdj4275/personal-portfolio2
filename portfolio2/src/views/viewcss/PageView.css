@@ -24,6 +24,7 @@ body {
     min-height: 100vh;
     background-size: cover;
   }
+  
   @media screen and (max-width: 700px), (max-height: 500px) {
     .wrapper {
       flex-wrap: wrap;
@@ -90,6 +91,18 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+    transition-duration: 1s;
+  }
+  .player-cover__item_overlay {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    left: 80px;
+    top: 20px;
+    color: transparent;
+    transition-duration: 1s;
+    transition-delay: .5s;
   }
   .player-cover__item:before {
     content: "";
@@ -382,4 +395,11 @@ body {
     transform: scale(0.55);
     pointer-events: none;
     opacity: 0;
+  }
+
+  .player-cover:hover .player-cover__item{
+    transform: translateX(-300px);
+  }
+  .player-cover:hover .player-cover__item_overlay {
+    color: black;
   }
