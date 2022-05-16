@@ -83,14 +83,13 @@
 </template>
 
 <style scoped src="./viewcss/HomeView.css">
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 </style>
 
 <script>
 export default {
   data () {
     return {
-      text : "이 공간은 제가 좋아하는것을 공유하고 보여드림으로서<br>제 자신을 소개하고자 만든 공간입니다.<br>편히 즐겨주세요     ",
+      text : "이 공간에는 제가 좋아하는것을 모아보았습니다.<br>편히 즐겨주셨으면 합니다.<br>(사용된 사진은 전부 직접 찍은 사진을 활용하였습니다.)    ",
       index : 0
     }
   },
