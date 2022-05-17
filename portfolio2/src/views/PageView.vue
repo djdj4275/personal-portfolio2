@@ -15,7 +15,8 @@
                 v-for="(track, i) in tracks" :key="i"></div>
               </transition-group>
 
-              <div class="player-cover__item_overlay">안녕하세요</div>
+              <div class="player-cover__item_overlay" v-if="i === currentTrackIndex"
+                v-for="(track, i) in tracks" :key="i">{{track.read}}</div>
 
             </div>
 
@@ -126,7 +127,8 @@ export default {
           cover: "https://raw.githubusercontent.com/djdj4275/source-file/master/1.jpg",
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/잘가라 구름아.mp3",
           url: "https://soundcloud.com/leebyounghyeon/9p93sjl9gzdb?ref=clipboard&p=i&c=0&si=030BCD62B0DE40E2A66C0965C9B45296&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-          favorited: false
+          favorited: false,
+          read : "안녕하세요1"
         },
         {
           name: "25시",
@@ -134,7 +136,8 @@ export default {
           cover: "https://raw.githubusercontent.com/djdj4275/source-file/master/4.jpg",
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/25시.mp3",
           url: "https://soundcloud.com/youaredifferent/25a?ref=clipboard&p=i&c=0&si=026DB4221CD243C291AB8E418D6933C2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-          favorited: true
+          favorited: true,
+          read : "안녕하세요2"
         },
         {
           name: "Blah [W.Offmuseum] Prod.EARN",
@@ -142,7 +145,8 @@ export default {
           cover: "https://raw.githubusercontent.com/djdj4275/source-file/master/14.jpg",
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/Blah [W. Offmuseum] Prod. EARN.mp3",
           url: "https://soundcloud.com/041yeaheyeah/blah-w-offmuseum-prod-earn?ref=clipboard&p=i&c=0&si=CAA838915F35485FB52D365DDB818B63&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-          favorited: false
+          favorited: false,
+          read : "안녕하세요3"
         },
         {
           name: "Loose",
@@ -150,7 +154,8 @@ export default {
           cover: "https://raw.githubusercontent.com/djdj4275/source-file/master/3.jpg",
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/Loose.mp3",
           url: "https://soundcloud.com/nodsgn/loose?ref=clipboard&p=i&c=0&si=2122A3F3C7C04983BF8030ECBAAA02B3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-          favorited: false
+          favorited: false,
+          read : "안녕하세요4"
         },
         {
           name: "Love Me",
@@ -158,7 +163,8 @@ export default {
           cover: "https://raw.githubusercontent.com/djdj4275/source-file/master/13.jpg",
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/Love Me.mp3",
           url: "https://soundcloud.com/moodbymoonbow/love-me?ref=clipboard&p=i&c=0&si=A530B1921A8F4C9E9D57EDF98655C27E&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-          favorited: true
+          favorited: true,
+          read : "안녕하세요5"
         },
         {
           name: "널 탓하기엔 나도 수동적인 사람",
@@ -166,7 +172,8 @@ export default {
           cover: "https://raw.githubusercontent.com/djdj4275/source-file/master/2.jpg",
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/널 탓하기엔 나도 수동적인 사람.mp3",
           url: "https://soundcloud.com/6rwn/bsg8dugasw76?ref=clipboard&p=i&c=0&si=1D29AE63F5BA4001B0758775F65B5D78&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-          favorited: false
+          favorited: false,
+          read : "안녕하세요6"
         }]
         }
   },

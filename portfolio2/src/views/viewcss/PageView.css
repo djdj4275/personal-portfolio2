@@ -103,6 +103,7 @@ body {
     color: transparent;
     transition-duration: 1s;
     transition-delay: .5s;
+    text-shadow: 4px 2px 2px rgba(50, 88, 130, 0.32);
   }
   .player-cover__item:before {
     content: "";
@@ -401,5 +402,5 @@ body {
     transform: translateX(-300px);
   }
   .player-cover:hover .player-cover__item_overlay {
-    color: black;
+    color: grey;
   }
