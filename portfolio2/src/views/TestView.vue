@@ -1,6 +1,7 @@
 <template>
     <div class="test">
         <div class="container">
+
             <div class="card">
                 <h2>North</h2>
                 <i class="fas fa-arrow-right"></i>

@@ -6,6 +6,7 @@
       <router-link to="/about" @click.native="checkhome = false">About</router-link>
       <router-link to="/page" @click.native="checkhome = true">Page</router-link>
       <router-link to="/test" @click.native="checkhome = false">Test</router-link>
+      <router-link to="/kakaomap">카카오맵</router-link>
     </nav>
 
     <router-view/>

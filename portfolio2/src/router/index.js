@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import KakaoMap from '../components/KakaoMap.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     component: function () {
       return import('../views/TestView.vue')
     }
+  },
+  {
+    path: '/kakaomap',
+    name: 'kakaomap',
+    component: KakaoMap
   },
 ]
 
