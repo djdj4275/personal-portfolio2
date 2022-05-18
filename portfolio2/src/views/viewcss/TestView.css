@@ -70,7 +70,7 @@ body {
     background-color: white;
 }
 .card h2 {
-    z-index: 99;
+    z-index: 2;
     position: absolute;
     bottom: 0;
     right: 130px;
@@ -87,7 +87,7 @@ body {
     cursor: pointer;
 }
 p {
-    z-index: 99;
+    z-index: 2;
     position: absolute;
     top: 20px;
     right: 70px;
@@ -163,4 +163,29 @@ button{
 .card2 button {
     background-color: blue;
     mix-blend-mode: multiply;
+}
+.black-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(00, 00, 00, .5);
+    z-index: 10;
+}
+.white-bg {
+    position: fixed;
+    top: 120px;
+    left: 450px;
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: all .5s ease-in;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+.fade-leave, .fade-enter-to {
+    opacity: 1;
 }

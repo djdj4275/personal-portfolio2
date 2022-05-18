@@ -10,7 +10,7 @@
     </div>
 
     <!-- flip-card-container -->
-    <div class="flip-card-container" style="--hue: 220" v-for="(m,i) in infor1" :key="i">
+    <div class="flip-card-container" v-for="(m,i) in infor1" :key="i">
       <div class="flip-card">
 
         <div class="card-front">
