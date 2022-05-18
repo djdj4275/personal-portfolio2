@@ -4,20 +4,23 @@
         "title" : "North",
         "text" : "a lonely trip.",
         "Lat" : 33.450701,
-        "Lng" : 126.570667
+        "Lng" : 126.570667,
+        "card" : "card1"
     },
     {
         "id" : 2,
         "title" : "Vauxhall",
         "text" : "a lonely trip.",
         "Lat" : 33.450701,
-        "Lng" : 126.570667
+        "Lng" : 126.570667,
+        "card" : "card2"
     },
     {
         "id" : 3,
         "title" : "Vauxhall",
         "text" : "a lonely trip.",
         "Lat" : 33.450701,
-        "Lng" : 126.570667
+        "Lng" : 126.570667,
+        "card" : "card3"
     }
 ]

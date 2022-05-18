@@ -2,41 +2,19 @@
     <div class="test">
         <div class="container">
 
-            <div class="card">
-                <h2>North</h2>
-                <p>a lonely trip.</p>
-                <div class="pic"></div>
-                <div class="dotline"></div>
-                <div class="social">
-                    <font-awesome-icon class="icon" @click="facebook" :icon="{ prefix: 'fab', iconName: 'facebook' }"/>
-                    <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
-                    <font-awesome-icon class="icon" :icon="{ prefix: 'fab', iconName: 'instagram' }"/>
+            <div v-for="(m,i) in coordinate1" :key="i">
+                <div class="card">
+                    <h2>{{m.title}}</h2>
+                    <p>{{m.text}}</p>
+                    <div class="pic"></div>
+                    <div class="dotline"></div>
+                    <div class="social">
+                        <font-awesome-icon class="icon" @click="facebook" :icon="{ prefix: 'fab', iconName: 'facebook' }"/>
+                        <font-awesome-icon class="icon" @click="mapopen = true" icon="fa-solid fa-location-dot" />
+                        <font-awesome-icon class="icon" :icon="{ prefix: 'fab', iconName: 'instagram' }"/>
+                    </div>
+                    <button></button>
                 </div>
-                <button></button>
-            </div>
-            <div class="card card2">
-                <h2>Vauxhall</h2>
-                <p>a lonely trip.</p>
-                <div class="pic"></div>
-                <div class="dotline"></div>
-                <div class="social">
-                    <font-awesome-icon class="icon" @click="facebook" :icon="{ prefix: 'fab', iconName: 'facebook' }"/>
-                    <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
-                    <font-awesome-icon class="icon" :icon="{ prefix: 'fab', iconName: 'instagram' }"/>
-                </div>
-                <button></button>
-            </div>
-            <div class="card card2">
-                <h2>Vauxhall</h2>
-                <p>a lonely trip.</p>
-                <div class="pic"></div>
-                <div class="dotline"></div>
-                <div class="social">
-                    <font-awesome-icon class="icon" @click="facebook" :icon="{ prefix: 'fab', iconName: 'facebook' }"/>
-                    <font-awesome-icon class="icon" @click="mapopen = true" icon="fa-solid fa-location-dot" />
-                    <font-awesome-icon class="icon" :icon="{ prefix: 'fab', iconName: 'instagram' }"/>
-                </div>
-                <button></button>
             </div>
 
         </div>
