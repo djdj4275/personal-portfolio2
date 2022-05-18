@@ -4,7 +4,6 @@
 
             <div class="card">
                 <h2>North</h2>
-                <i class="fas fa-arrow-right"></i>
                 <p>a lonely trip.</p>
                 <div class="pic"></div>
                 <div class="dotline"></div>
@@ -17,7 +16,6 @@
             </div>
             <div class="card card2">
                 <h2>Vauxhall</h2>
-                <i class="fas fa-arrow-right"></i>
                 <p>a lonely trip.</p>
                 <div class="pic"></div>
                 <div class="dotline"></div>
@@ -30,7 +28,6 @@
             </div>
             <div class="card card2">
                 <h2>Vauxhall</h2>
-                <i class="fas fa-arrow-right"></i>
                 <p>a lonely trip.</p>
                 <div class="pic"></div>
                 <div class="dotline"></div>
@@ -58,11 +55,14 @@
 <script>
 import KakaoMap from '../components/KakaoMap.vue';
 
+const coordinate = require('../assets/coordinate.json');
+
 export default {
     components: { KakaoMap },
     data() {
         return {
             mapopen : false,
+            coordinate1 : coordinate
         }
     },
     methods : {
