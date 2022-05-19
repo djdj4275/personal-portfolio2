@@ -1,26 +1,34 @@
 [
     {
         "id" : 1,
-        "title" : "North",
+        "title" : "Johyun Gallery",
         "text" : "a lonely trip.",
-        "Lat" : 33.450701,
-        "Lng" : 126.570667,
+        "Lat" : 35.1568,
+        "Lng" : 129.1796,
         "card" : "card1"
     },
     {
         "id" : 2,
-        "title" : "Vauxhall",
+        "title" : "Busan Museum of Art",
         "text" : "a lonely trip.",
-        "Lat" : 33.450701,
-        "Lng" : 126.570667,
+        "Lat" : 35.1667,
+        "Lng" : 129.1371,
         "card" : "card2"
     },
     {
         "id" : 3,
-        "title" : "Vauxhall",
+        "title" : "Museum of Contemporary Art, Busan",
         "text" : "a lonely trip.",
-        "Lat" : 33.450701,
-        "Lng" : 126.570667,
+        "Lat" : 35.1093,
+        "Lng" : 128.9428,
         "card" : "card3"
+    },
+    {
+        "id" : 4,
+        "title" : "Ground Seesaw (Seochon)",
+        "text" : "a lonely trip.",
+        "Lat" : 37.578057,
+        "Lng" : 126.973115,
+        "card" : "card4"
     }
 ]

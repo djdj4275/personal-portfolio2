@@ -4,6 +4,9 @@
 
 <script> 
 export default { 
+    props : [
+        "Lat", "Lng"
+    ],
     data() {
         return {
             map : null,
@@ -13,7 +16,7 @@ export default {
         initMap() { 
             const container = document.getElementById('map'); 
             const options = { 
-                center: new kakao.maps.LatLng(33.450701, 126.570667), 
+                center: new kakao.maps.LatLng(this.Lat, this.Lng),
                 level: 5,
             }; 
             const map = new kakao.maps.Map(container, options); 

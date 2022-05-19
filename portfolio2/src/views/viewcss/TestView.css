@@ -47,7 +47,7 @@ body {
 }
 .card:before {
     content: "";
-    z-index: 99;
+    z-index: 10;
     position: absolute;
     top: -10px;
     left: 32px;
@@ -59,7 +59,7 @@ body {
 }
 .card:after {
     content: "";
-    z-index: 99;
+    z-index: 10;
     position: absolute;
     bottom: -10px;
     left: 32px;
@@ -74,7 +74,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 130px;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 700;
     color: white;
 }
@@ -102,7 +102,7 @@ p {
     z-index: 100;
     width: 400px;
     height: 200px;
-    background-image: url("https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80");
+    background-image: url("../../assets/조현화랑/1.jpg");
     background-size: 100% 100%;
     filter: grayscale(100%);
 }
@@ -148,9 +148,6 @@ button{
 .card:hover button {
         transform: scale(16.5);
 }
-.card:hover .circle {
-    transform: scale(16.5);
-}
 .card:hover p {
     color: white;
 }
@@ -158,7 +155,10 @@ button{
     filter: grayscale(0);
 }
 .card2 .pic {
-    background-image: url("https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb-0.3.5&s=3a2fc3039516555bbb2e9cd2967bd321&auto=format&fit=crop&w=1537&q=80");
+    background-image: url("../../assets/부산시립미술관/1.jpg");
+}
+.card3 .pic {
+    background-image: url("../../assets/부산현대미술관/1.jpg");
 }
 .card2 button {
     background-color: blue;
@@ -188,4 +188,11 @@ button{
 }
 .fade-leave, .fade-enter-to {
     opacity: 1;
+}
+.kakaooff {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    top: 10px;
 }
