@@ -45,6 +45,8 @@ export default {
 #map {
     width: 500px;
     height: 500px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px gray;
 } 
 </style>
 
