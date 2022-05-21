@@ -68,10 +68,10 @@ export default {
             this.mapopen=true;
             this.lat = Lat;
             this.lng = Lng;
+            currentIdx = 0;
         },
         moveSlide(num) {
             this.$refs.slideshow.style.transform = `translateX(${-num * 200 + "px"})`;
-            console.log(this.$refs.slideshow.style.trasform);
             currentIdx = num; 
         },
         moveleft() {
