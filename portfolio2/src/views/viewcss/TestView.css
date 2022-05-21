@@ -174,10 +174,10 @@ button{
 }
 .white-bg {
     position: fixed;
-    top: 120px;
-    left: 450px;
+    top: 10%;
+    left: 15%;
     width: 1000px;
-    height: 700px;
+    height: 600px;
     background-color: white;
 }
 .fade-enter-active, .fade-leave-active {
@@ -195,4 +195,44 @@ button{
     background-color: black;
     color: white;
     top: 10px;
+}
+
+.slideShow { 
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 100px;
+    top: 0;
+    background-color: rgba(00, 00, 00, .5);
+}
+.slideShow_itembox {
+    position: relative;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    left: 25%;
+    background-color: black;
+    overflow: hidden;
+}
+.slideShow_items {
+    position : absolute;
+    width: 900px;
+    transition: all 1s;
+}
+.slideShow_itembox li {
+    list-style: none;
+}
+.slideShow_item {
+    width: 200px;
+    object-fit: cover;
+    float: left;
+}
+.slideShow_left {
+    top: 40%;
+    left: 0;
+    z-index: 2;
+}
+.slideShow_right {
+    top: 40%;
+    right: 0;
 }
