@@ -1,12 +1,8 @@
-body {
-    background: #dfe7ef;
-    font-family: "Bitter", serif;
-  }
-  
+  /* 전체적으로 border-box 사이징 */
   * {
     box-sizing: border-box;
   }
-  
+  /* 좋아요,링크,next,prev등 버튼 아이콘 디자인  */
   .icon {
     display: inline-block;
     width: 1em;
@@ -15,7 +11,7 @@ body {
     stroke: currentColor;
     fill: currentColor;
   }
-  
+  /* 플레이어를 감싸는 박스 */
   .wrapper {
     width: 100%;
     display: flex;
@@ -32,12 +28,14 @@ body {
     border-radius: 15px;
     padding: 30px;
   }
+  /* 버튼과 앨범 이미지, 오버레이 박스 */
   .player__top {
     display: flex;
     align-items: flex-start;
     position: relative;
     z-index: 4;
   }
+  /* 음원 커버 박스 (오버레이포함) */
   .player-cover {
     width: 300px;
     height: 300px;
@@ -48,6 +46,7 @@ body {
     border-radius: 15px;
     z-index: 1;
   }
+  /* 음원 커버 */
   .player-cover__item {
     background-repeat: no-repeat;
     background-position: center;
@@ -60,6 +59,7 @@ body {
     top: 0;
     transition-duration: 1s;
   }
+  /* 음원 커버 오버레이 */
   .player-cover__item_overlay {
     width: 100%;
     height: 100%;
@@ -72,6 +72,7 @@ body {
     transition-delay: .5s;
     text-shadow: 4px 2px 2px rgba(50, 88, 130, 0.32);
   }
+  /* 입체감을 주기위한 before,after 컨텐츠 생성과 디자인 */
   .player-cover__item:before {
     content: "";
     background: inherit;
@@ -98,15 +99,7 @@ body {
     position: absolute;
     border-radius: 15px;
   }
-  .player-cover__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0px 10px 40px 0px rgba(76, 70, 124, 0.5);
-    user-select: none;
-    pointer-events: none;
-  }
+  /* 좋아요,링크,next,prev등 버튼을 감싸는 박스 */
   .player-controls {
     flex: 1;
     padding-left: 20px;
@@ -114,6 +107,7 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  /* 버튼 각각의 디자인 */
   .player-controls__item {
     display: inline-flex;
     font-size: 30px;
@@ -128,6 +122,7 @@ body {
     position: relative;
     transition: all 0.3s ease-in-out;
   }
+  /* 버튼들에 입체감을 위한 컨텐츠 생성과 디자인 */
   .player-controls__item::before {
     content: "";
     position: absolute;
@@ -141,10 +136,12 @@ body {
     transition: all 0.3s ease-in-out;
     transition: all 0.4s cubic-bezier(0.35, 0.57, 0.13, 0.88);
   }
+  /* 플레이어 버튼 아이콘에 추가 디자인 */
   .player-controls__item .icon {
     position: relative;
     z-index: 2;
   }
+  /* 버튼중 플레이버튼만 별도 디자인 */
   .player-controls__item.-xl {
     margin-bottom: 0;
     font-size: 95px;
@@ -154,37 +151,34 @@ body {
     height: auto;
     display: inline-flex;
   }
+  /* 플레이 버튼의 추가 before요소 없애기 */
   .player-controls__item.-xl:before {
     display: none;
   }
+  /* 좋아요 버튼 활성화된 버튼 디자인변경 */
   .player-controls__item.-favorite.active {
     color: red;
   }
-  
-  [v-cloak] {
-    display: none;
-  }
-  
-  [v-cloak] > * {
-    display: none;
-  }
-  
+  /* 노래 진행바 전체 박스 */
   .progress {
     width: 100%;
     margin-top: -15px;
     user-select: none;
   }
+  /* 진행바의 가수이름, 제목등 박스 */
   .progress__top {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
   }
+  /* 노래 전체시간 */
   .progress__duration {
     color: #71829e;
     font-weight: 700;
     font-size: 20px;
     opacity: 0.5;
   }
+  /* 노래 진행시간 */
   .progress__time {
     margin-top: 2px;
     color: #71829e;
@@ -192,7 +186,7 @@ body {
     font-size: 16px;
     opacity: 0.7;
   }
-  
+  /* 노래 재생 바 감싸는 박스 */
   .progress__bar {
     height: 6px;
     width: 100%;
@@ -201,26 +195,28 @@ body {
     display: inline-block;
     border-radius: 10px;
   }
-  
+  /* 노래 재생 바 */
   .progress__current {
     height: inherit;
     width: 0%;
     background-color: #a3b3ce;
     border-radius: 10px;
   }
-  
+  /* 가수,이름등 박스 */
   .album-info {
     color: #71829e;
     flex: 1;
     padding-right: 60px;
     user-select: none;
   }
+  /* 가수 이름 */
   .album-info__name {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;
     line-height: 1.3em;
   }
+  /* 노래 이름 */
   .album-info__track {
     font-weight: 400;
     font-size: 20px;
@@ -228,6 +224,7 @@ body {
     line-height: 1.3em;
     min-height: 52px;
   }
+  /* 다음 노래 넘어갈때의 트랜지션 */
   .scale-out-enter-active {
     transition: all 0.35s ease-in-out;
   }
@@ -247,7 +244,7 @@ body {
     pointer-events: none;
     opacity: 0;
   }
-  
+  /* 전 노래로 돌아갈때의 트랜지션  */
   .scale-in-enter-active {
     transition: all 0.35s ease-in-out;
   }
@@ -267,14 +264,14 @@ body {
     pointer-events: none;
     opacity: 0;
   }
-
+  /* 앨범커버 호버시 설명 나오기위한 트랜지션 */
   .player-cover:hover .player-cover__item{
     transform: translateX(-300px);
   }
   .player-cover:hover .player-cover__item_overlay {
     color: grey;
   }
-
+  /* 576px시 반응형으로 플레이어 크기 변화 */
   @media screen and (max-width: 576px), (max-height: 500px) {
     .player__top {
       flex-wrap: wrap;
@@ -306,7 +303,7 @@ body {
       margin-right: 0;
     }
   }
-  
+  /* 최소 500px시의 플레이어 크기변화 */
   @media screen and (min-width: 500px) {
     .player-controls__item:hover {
       color: #532ab9;

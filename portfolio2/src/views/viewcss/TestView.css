@@ -1,33 +1,13 @@
+/* 기본 마진, 패딩값 0, 사이징 바꿔줌 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* test 컴포넌트 전체 div */
 .test {
     width: 100%;
     height: 1000px;
-}
-.icon {
-    opacity: 0;
-    font-size: 18px;
-    color: white;
-    transform: scale(0.1);
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-.dotline {
-    position: absolute;
-    top: 5px;
-    left: 40px;
-    height: 190px;
-    border-left: 0.5px white dashed;
-}
-h2 {
-    pointer-events: none;
-}
-body {
-    width: 100vw;
-    height: 100vh;
 }
 .container {
     width: 100%;
@@ -37,6 +17,35 @@ body {
     align-items: center;
     flex-direction: column;
 }
+/* 폰트어썸 아이콘버튼 */
+.icon {
+    opacity: 0;
+    font-size: 18px;
+    color: white;
+    transform: scale(0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+/* 티켓디자인 사이의 도트라인 디자인 */
+.dotline {
+    position: absolute;
+    top: 5px;
+    left: 40px;
+    height: 190px;
+    border-left: 0.5px white dashed;
+}
+/* 표 제목에 글자커서 뜨는것 없애기 */
+h2 {
+    pointer-events: none;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 130px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+/* 표 표준 디자인 */
 .card {
     position: relative;
     width: 500px;
@@ -45,6 +54,7 @@ body {
     overflow: hidden;
     margin-bottom: 4px;
 }
+/* 표 디자인중 도트라인 끝과 시작부분 큰 원 */
 .card:before {
     content: "";
     z-index: 10;
@@ -69,23 +79,7 @@ body {
     border-radius: 16px;
     background-color: white;
 }
-.card h2 {
-    z-index: 2;
-    position: absolute;
-    bottom: 0;
-    right: 130px;
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
-}
-.fa-arrow-right {
-    z-index: 100;
-    position: absolute;
-    right: 75px;
-    bottom: 25px;
-    font-size: 40px;
-    cursor: pointer;
-}
+/* 표 텍스트 디자인 */
 p {
     z-index: 2;
     position: absolute;
@@ -98,6 +92,7 @@ p {
     writing-mode: vertical-lr;
     transition: all 0.2s ease;
 }
+/* 표에 들어갈 사진의 전체적 디자인과 그레이필터 */
 .pic {
     z-index: 100;
     width: 400px;
@@ -106,6 +101,7 @@ p {
     background-size: 100% 100%;
     filter: grayscale(100%);
 }
+/* 아이콘버튼을 감싸는 div */
 .social {
     position: absolute;
     left: 60px;
@@ -118,6 +114,7 @@ p {
     border-radius: 80px;
     z-index: 10000;
 }
+/* 버튼 호버시에 아이콘 차례대로 나타내기 */
 .icon:nth-of-type(1) {
     transition-delay: 0.4s;
 }
@@ -131,6 +128,7 @@ p {
     opacity: 1;
     transform: scale(1);
 }
+/* 표 버튼 디자인 */
 button{
     position: absolute;
     right: 14px;
@@ -145,6 +143,7 @@ button{
     transition: all 0.3s ease;
     mix-blend-mode: hard-light;
 }
+/* 버튼 호버시의 디자인 */
 .card:hover button {
         transform: scale(16.5);
 }
@@ -154,16 +153,19 @@ button{
 .card:hover .pic {
     filter: grayscale(0);
 }
+/* 카드별 사진 변경 */
 .card2 .pic {
     background-image: url("../../assets/부산시립미술관/1.jpg");
 }
 .card3 .pic {
     background-image: url("../../assets/부산현대미술관/1.jpg");
 }
+/* 카드별 버튼 디자인 변경 */
 .card2 button {
     background-color: blue;
     mix-blend-mode: multiply;
 }
+/* 모달창의 검은배경 */
 .black-bg {
     position: fixed;
     width: 100%;
@@ -172,6 +174,7 @@ button{
     background-color: rgba(00, 00, 00, .5);
     z-index: 10;
 }
+/* 모달창의 하얀배경 (실질적 컨텐츠 배치장소) */
 .white-bg {
     position: fixed;
     top: 10%;
@@ -180,6 +183,7 @@ button{
     height: 600px;
     background-color: white;
 }
+/* 모달창 트랜지션 애니메이션 */
 .fade-enter-active, .fade-leave-active {
     transition: all .5s ease-in;
 }
@@ -189,6 +193,7 @@ button{
 .fade-leave, .fade-enter-to {
     opacity: 1;
 }
+/* 모달창 닫기 버튼 */
 .kakaooff {
     width: 30px;
     height: 30px;
@@ -196,7 +201,7 @@ button{
     color: white;
     top: 10px;
 }
-
+/* 슬라이드쇼 전체 박스 */
 .slideShow { 
     position: absolute;
     width: 400px;
@@ -205,6 +210,7 @@ button{
     top: 0;
     background-color: rgba(00, 00, 00, .5);
 }
+/* 슬라이드쇼 사진박스 */
 .slideShow_itembox {
     position: relative;
     top: 0;
@@ -214,6 +220,7 @@ button{
     background-color: black;
     overflow: hidden;
 }
+/* 슬라이드쇼 ul */
 .slideShow_items {
     position : absolute;
     width: 900px;
@@ -222,16 +229,19 @@ button{
 .slideShow_itembox li {
     list-style: none;
 }
+/* 슬라이드쇼의 사진 디자인 */
 .slideShow_item {
     width: 200px;
     object-fit: cover;
     float: left;
 }
+/* 슬라이드쇼 좌측버튼 */
 .slideShow_left {
     top: 40%;
     left: 0;
     z-index: 2;
 }
+/* 슬라이드쇼 우측버튼 */
 .slideShow_right {
     top: 40%;
     right: 0;

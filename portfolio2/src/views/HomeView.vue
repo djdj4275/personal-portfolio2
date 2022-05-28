@@ -1,11 +1,15 @@
 <template>
   <div class="home">
+      <!-- 타이핑 이벤트 -->
       <div class="typingbox">
         <div class="typing">
+          <!-- 타이핑과 함께 진행될 blink -->
           <span v-html="displaytext"></span><span class="blink">|</span>
         </div>
       </div>
+      <!-- 책 넘기는 애니메이션 -->
       <div id="book">
+            <!-- 넘기는 버튼을 대신할 체크박스 -->
             <input type="checkbox" id="btn1">
             <input type="checkbox" id="btn2">
             <input type="checkbox" id="btn3">
@@ -130,16 +134,21 @@
 export default {
   data () {
     return {
+      // 텍스트 내용
       text : "이 공간에는 제가 좋아하는것을 모아보았습니다.<br>편히 즐겨주셨으면 합니다.<br>(사용된 사진은 직접 찍은 사진을 활용하였습니다.)    ",
       index : 0
     }
   },
   computed : {
+    // displaytext가 실행될때마다 위의 text 데이터값의 0(제일 첫 값)에서 0까지(첫 단어)
+    // 를 위의 v-html속성 span태그에 넣어줌
+    // 이때 computed는 값이 변화시 재 실행하기에 반복 실행됨
     displaytext() {
       return this.text.substring(0,this.index);
     } 
   },
   methods : {
+    // 타이핑 시행시에 줄바꿈, 0.15초마다 타이핑 시행
     typing() {
       if (this.index <= this.text.length) {
         this.index ++;
@@ -154,6 +163,7 @@ export default {
     }
   },
   created () {
+    // 페이지 시작시 타이핑 시작
     this.typing();
   }
 }
