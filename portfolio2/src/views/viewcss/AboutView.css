@@ -1,14 +1,23 @@
+/* 전체 태그와 after,before 기본 마진,패딩값 박스사이징 지정 */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 전체 카드들 display지정 */
 .about {
     display: inline-block;
   }
-  
+  /* 검색창 전체 박스 */
   .search-wrapper {
       position: absolute;
       transform: translate(-50%, -50%);
       top:30px;
       right: 10px;
   }
-  
+  /* 글이 작성될공간과 아이콘 감싸는 박스 */
   .search-wrapper .input-holder {    
       height: 50px;
       width:50px;
@@ -18,6 +27,7 @@
       position: relative;
       transition: all 0.3s ease-in-out;
   }
+  /* 활성화시에 박스 디자인 */
   .search-wrapper.active .input-holder {
       width:450px;
       height: 45px;
@@ -25,6 +35,7 @@
       background: white;
       transition: all .5s;
   }
+  /* 글이 작성될 공간 */
   .search-wrapper .input-holder .search-input {
       width:100%;
       height: 20px;
@@ -38,10 +49,12 @@
       color:black;
       transform: translate(0, 60px);
   }
+  /* 활성화시에 글 작성될 공간 */
   .search-wrapper.active .input-holder .search-input {
       opacity: 1;
       transform: translate(0, 10px);
   }
+  /* 검색창 활성화 시키는 버튼 디자인 */
   .search-wrapper .input-holder .search-icon {
       width:40px;
       height:40px;
@@ -56,6 +69,7 @@
       cursor: pointer;
       transition: all 0.3s ease;
   }
+  /* 활성화시에 활성화 버튼 디자인 */
   .search-wrapper.active .input-holder .search-icon {
       right: 5px;
       top: 5px;
@@ -63,6 +77,7 @@
       height:35px;
       border-radius: 30px;
   }
+  /* 버튼안에 있는 돋보기 모양 */
   .search-wrapper .input-holder .search-icon span {
       width:22px;
       height:22px;
@@ -71,6 +86,29 @@
       transform: rotate(45deg);
       transition: all .4s ;
   }
+  /* 돋보기 after,before 디자인 */
+    .search-wrapper .input-holder .search-icon span::before,
+    .search-wrapper .input-holder .search-icon span::after {
+      position: absolute;
+      content: '';
+    }
+    .search-wrapper .input-holder .search-icon span::before {
+      width: 4px;
+      height: 10px;
+      left: 9px;
+      top: 18px;
+      border-radius: 2px;
+      background: gold;
+    }
+    .search-wrapper .input-holder .search-icon span::after {
+      width: 20px;
+      height: 20px;
+      left: 0px;
+      top: 0px;
+      border-radius: 16px;
+      border: 4px solid gold;
+    }
+  /* 활성화시에 돋보기 after, before 디자인 추가 */
   .search-wrapper.active .input-holder .search-icon span::after {
       width: 25px;
       height: 1px;
@@ -85,26 +123,7 @@
     border: 2px solid gold;
     transform: rotate(-90deg);
   }
-  .search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
-      position: absolute;
-      content:'';
-  }
-  .search-wrapper .input-holder .search-icon span::before {
-      width: 4px;
-      height: 10px;
-      left: 9px;
-      top: 18px;
-      border-radius: 2px;
-      background: gold;
-  }
-  .search-wrapper .input-holder .search-icon span::after {
-      width: 20px;
-      height: 20px;
-      left: 0px;
-      top: 0px;
-      border-radius: 16px;
-      border: 4px solid gold;
-  }
+  /* 검색창 닫기버튼 디자인 */
   .search-wrapper .close {
       position: absolute;
       z-index: 1;
@@ -117,6 +136,7 @@
       transition: all .3s;
       transition-delay: 0.3s;
   }
+  /* 활성화시에 닫기버튼 디자인 */
   .search-wrapper.active .close {
       top: 10px;
       right:-50px;
@@ -124,6 +144,7 @@
       transition: all .6s;
       transition-delay: 0.5s;
   }
+  /* 닫기버튼의 after,before 디자인 */
   .search-wrapper .close::before, .search-wrapper .close::after {
       position:absolute;
       content:'';
@@ -145,13 +166,7 @@
     border-radius: 16px;
     border: 4px solid gold;
   }
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  /* 카드를 감싸는 박스 */
   .flip-card-container {
     float: left;
     width: 310px;
@@ -159,19 +174,19 @@
     margin: 40px;
     perspective: 1000px;
   }
-
+  /* 카드의 디자인 지정 */
   .flip-card {
     height: inherit;
     position: relative;
     transform-style: preserve-3d;
     transition: .6s .1s;
   }
-
+  /* 카드에 호버시 또는 카드에 버튼 포커스시 상위요소인 카드가 돌아간 상태로 유지 */
   .flip-card-container:hover .flip-card,
   .flip-card-container:focus-within .flip-card {
     transform: rotateY(180deg);
   }
-
+  /* 정면카드와 뒷카드 공통 디자인 */
   .card-front,
   .card-back {
     width: 100%;
@@ -184,21 +199,20 @@
     overflow: hidden;
     backface-visibility: hidden;
   }
-
+  /* 정면카드와 뒷카드의 각각의 초기값 설정 */
   .card-front {
     transform: rotateY(0deg);
     z-index: 2;
   }
-
   .card-back {
     transform: rotateY(180deg);
     z-index: 1;
   }
-
+  /* 카드의 이미지와 태그를 달 박스 */
   figure {
     z-index: -1;
   }
-
+  /* 뒷면카드의 이미지 규격 */
   figure,
   .img-bg {
     position: absolute;
@@ -206,13 +220,14 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background: rgb(0, 0, 0, 0.3);
   }
-
+  /* 이미지태그 사이즈 맞추기 */
   img {
     height: 100%;
     border-radius: 24px;
   }
-
+  /* 태그달 캡션 */
   figcaption {
     display: block;
     width: auto;
@@ -227,32 +242,8 @@
     color: white;
     background: rgb(0,0,0,0.5);
   }
-
-  .img-bg {
-    background: rgb(0,0,0,0.3);
-  }
-  
-  .card-front .img-bg::before {
-    content: "";
-    position: absolute;
-    top: 34%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(18deg);
-    width: 100%;
-    height: 6px;
-    border: 1px solid blue;
-    border-left-color: transparent;
-    border-right-color: transparent;
-    transition: .1s;
-  }
-
-  .flip-card-container:hover .card-front .img-bg::before {
-    width: 6px;
-    border-left-color: blue;
-    border-right-color: blue;
-  }
-
-  ul {
+   /* 카드의 정보를 담을 ul */
+  .cloth {
     padding-top: 50%;
     margin: 0 auto;
     width: 70%;
@@ -263,8 +254,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: absolute;
+    top: -60px;
+    right: 50px;
   }
-
+  /* 카드의 정보들 */
   li {
     width: 100%;
     margin-top: 12px;
@@ -273,7 +267,7 @@
     text-align: center;
     position: relative;
   }
-  
+  /* 카드의 정보밑의 밑줄 */
   li::after {
     content: "";
     position: absolute;
@@ -284,7 +278,7 @@
     background: currentColor;
     opacity: .2;
   }
-
+  /* 홀드 버튼 디자인 */
   button {
     font-weight: bold;
     color: white;
@@ -300,20 +294,14 @@
     transition: .3s;
     cursor: pointer;
   }
-  
+  /* 버튼에 호버,클릭 포커스시 디자인 */
   button:hover,
   button:focus {
     color: blue;
     background: rgb(0,0,0,0.5);
     border-color: currentColor;
   }
-
-  .cloth {
-    position: absolute;
-    top: -60px;
-    right: 50px;
-  }
-
+  /* 호버시에 움직일 라인 애니메이션 감싸는 박스 */
   .design-container {
     width: 100%;
     height: 100%;
@@ -323,14 +311,14 @@
     left: 0;
     pointer-events: none;
   }
-
+  /* 라인에 공통으로 들어갈 옵션 */
   .design {
     display: block;
     background: white;
     position: absolute;
     opacity: .5;
   }
-  
+  /* 각각의 라인 위치와 크기 */
   .design--1, .design--2 {
     width: 10px;
     height: 500px;
@@ -339,63 +327,46 @@
     width: 1px;
     height: 500px;
   }
-
   .design--1 {
     right: 0;
     top: -80px;
     transform: rotate(-45deg);
   }
-
   .design--2 {
     left: 0;
     bottom: -80px;
     transform: rotate(-45deg);
   }
-
   .design--3 {
     right: 20px;
     bottom: -400px;
     transition-duration: .5s;
   }
-
   .design--4 {
     left: 20px;
     top: -400px;
     transition-duration: .5s;
   }
-
   .design--5 {
     left: 40px;
     bottom: -400px;
     transition-duration: .5s;
   }
-
   .design--6 {
     right: 40px;
     top: -400px;
     transition-duration: .5s;
   }
-  
+  /* 버튼 호버, 포커스시 라인 애니메이션 */
   button:focus + ul + div .design--3, button:hover + ul + div .design--3{
     bottom: -80px;
   }
-
   button:focus + ul + div .design--4, button:hover + ul + div .design--4{
     top: -80px;
   }
-
   button:focus + ul + div .design--5, button:hover + ul + div .design--5{
     bottom: -80px;
   }
-
   button:focus + ul + div .design--6, button:hover + ul + div .design--6{
     top: -80px;
-  }
-
-  .abs-site-link {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    font-size: 16px;
   }
