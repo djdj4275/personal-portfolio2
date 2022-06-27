@@ -58,6 +58,7 @@
     left: 0;
     top: 0;
     transition-duration: 1s;
+    z-index: 2;
   }
   /* 음원 커버 오버레이 */
   .player-cover__item_overlay {
@@ -301,6 +302,10 @@
       margin-left: auto;
       font-size: 75px;
       margin-right: 0;
+    }
+    .player-cover__item_overlay {
+      left: 30px;
+      top: 60px;
     }
   }
   /* 최소 500px시의 플레이어 크기변화 */

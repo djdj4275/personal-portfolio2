@@ -111,7 +111,7 @@
     </div>
 </template>
 
-<style scoped src="./viewcss/PageView.css">
+<style scoped src="./viewcss/PlayListView.css">
 </style>
 
 <script>

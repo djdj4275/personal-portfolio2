@@ -135,7 +135,8 @@ button{
     bottom: 14px;
     width: 30px;
     height: 30px;
-    background-color: orangered;
+    background-color: darkblue;
+    color: white;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -160,9 +161,20 @@ button{
 .card3 .pic {
     background-image: url("../../assets/부산현대미술관/1.jpg");
 }
+.card4 .pic {
+    background-image: url("../../assets/그라운드시소서촌/1.jpg");
+}
 /* 카드별 버튼 디자인 변경 */
 .card2 button {
-    background-color: blue;
+    background-color: coral;
+    mix-blend-mode: multiply;
+}
+.card3 button {
+    background-color: brown;
+    mix-blend-mode: multiply;
+}
+.card4 button {
+    background-color: cadetblue;
     mix-blend-mode: multiply;
 }
 /* 모달창의 검은배경 */
@@ -204,26 +216,29 @@ button{
 /* 슬라이드쇼 전체 박스 */
 .slideShow { 
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
     right: 100px;
     top: 0;
-    background-color: rgba(00, 00, 00, .5);
+    right: 0;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
 }
 /* 슬라이드쇼 사진박스 */
 .slideShow_itembox {
     position: relative;
     top: 0;
-    width: 200px;
-    height: 200px;
-    left: 25%;
+    width: 400px;
+    height: 400px;
     background-color: black;
     overflow: hidden;
+    margin: auto;
 }
 /* 슬라이드쇼 ul */
 .slideShow_items {
     position : absolute;
-    width: 900px;
+    width: 1600px;
     transition: all 1s;
 }
 .slideShow_itembox li {
@@ -231,18 +246,19 @@ button{
 }
 /* 슬라이드쇼의 사진 디자인 */
 .slideShow_item {
-    width: 200px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     float: left;
 }
 /* 슬라이드쇼 좌측버튼 */
 .slideShow_left {
-    top: 40%;
-    left: 0;
+    top: 45%;
+    left: 2%;
     z-index: 2;
 }
 /* 슬라이드쇼 우측버튼 */
 .slideShow_right {
-    top: 40%;
-    right: 0;
+    top: 45%;
+    right: 2%;
 }

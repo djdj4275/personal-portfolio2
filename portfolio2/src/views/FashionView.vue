@@ -83,6 +83,6 @@ export default {
 }
 </script>
 
-<style scoped src="./viewcss/AboutView.css">
+<style scoped src="./viewcss/FashionView.css">
 </style>
 

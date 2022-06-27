@@ -1,6 +1,7 @@
 [
     {
         "id" : 1,
+        "name" : "조현화랑",
         "title" : "Johyun Gallery",
         "text" : "a lonely trip.",
         "Lat" : 35.1568,
@@ -9,6 +10,7 @@
     },
     {
         "id" : 2,
+        "name" : "부산시립미술관",
         "title" : "Busan Museum of Art",
         "text" : "a lonely trip.",
         "Lat" : 35.1667,
@@ -17,6 +19,7 @@
     },
     {
         "id" : 3,
+        "name" : "부산현대미술관",
         "title" : "Museum of Contemporary Art, Busan",
         "text" : "a lonely trip.",
         "Lat" : 35.1093,
@@ -25,6 +28,7 @@
     },
     {
         "id" : 4,
+        "name" : "그라운드시소서촌",
         "title" : "Ground Seesaw (Seochon)",
         "text" : "a lonely trip.",
         "Lat" : 37.578057,

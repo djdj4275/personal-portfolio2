@@ -11,7 +11,7 @@
                     <div class="social">
                         <font-awesome-icon class="icon" @click="facebook" :icon="{ prefix: 'fab', iconName: 'facebook' }"/>
                         <!-- 아이콘 클릭시 모달창을 열며 json안의 위도,경도값을 들고감 -->
-                        <font-awesome-icon class="icon" @click="open(m.Lat,m.Lng)" icon="fa-solid fa-location-dot" />
+                        <font-awesome-icon class="icon" @click="open(m.Lat,m.Lng,m.name)" icon="fa-solid fa-location-dot" />
                         <font-awesome-icon class="icon" :icon="{ prefix: 'fab', iconName: 'instagram' }"/>
                     </div>
                     <button></button>
@@ -31,10 +31,10 @@
                     <button @click="moveleft" class="slideShow_left">&lang;</button>
                     <div class="slideShow_itembox">
                         <ul class="slideShow_items" ref="slideshow">
-                            <li><img class= "slideShow_item" src="../assets/1.jpg" /></li>
-                            <li><img class= "slideShow_item" src="../assets/2.jpg" /></li>
-                            <li><img class= "slideShow_item" src="../assets/3.jpg" /></li>
-                            <li><img class= "slideShow_item" src="../assets/4.jpg" /></li>
+                            <li><img class= "slideShow_item" :src="require(`../assets/${name}/1.jpg`)" /></li>
+                            <li><img class= "slideShow_item" :src="require(`../assets/${name}/2.jpg`)" /></li>
+                            <li><img class= "slideShow_item" :src="require(`../assets/${name}/3.jpg`)" /></li>
+                            <li><img class= "slideShow_item" :src="require(`../assets/${name}/4.jpg`)" /></li>
                         </ul>
                     </div>
                     <button @click="moveright" class="slideShow_right">&rang;</button>
@@ -63,6 +63,7 @@ export default {
             // 반복문에서 들고올 위도,경도값
             lat : "",
             lng : "",
+            name : "",
         }
     },
     methods : {
@@ -70,15 +71,16 @@ export default {
         window.open('https://naver.com');
         },
         // 함수 실행시 위도,경도를 데이터의 lat, lng에넣어주고, 모달창을 열어줌
-        open(Lat,Lng) {
+        open(Lat,Lng,Name) {
             this.mapopen=true;
             this.lat = Lat;
             this.lng = Lng;
             currentIdx = 0;
+            this.name = Name;
         },
         // 함수실행시 slideshow에 접근하여 해당값만큼 픽셀이동
         moveSlide(num) {
-            this.$refs.slideshow.style.transform = `translateX(${-num * 200 + "px"})`;
+            this.$refs.slideshow.style.transform = `translateX(${-num * 400 + "px"})`;
             currentIdx = num; 
         },
         // 왼쪽, 오른쪽 버튼 둘다 if조건문으로 첫장과 끝장일때 넘어가지않도록함
@@ -95,5 +97,5 @@ export default {
 }
 </script>
 
-<style scoped src="./viewcss/TestView.css">
+<style scoped src="./viewcss/ExhibitionView.css">
 </style>

@@ -5,9 +5,9 @@
       <a class="logo"><span class="logo">J</span><span class="logo rotate">D</span></a>
       <!-- 각 페이지 라우터링크 -->
       <router-link to="/" @click.native="checkhome = true">Home</router-link>
-      <router-link to="/about" @click.native="checkhome = false">About</router-link>
-      <router-link to="/page" @click.native="checkhome = true">Page</router-link>
-      <router-link to="/test" @click.native="checkhome = false">Test</router-link>
+      <router-link to="/fashion" @click.native="checkhome = false">Fashion</router-link>
+      <router-link to="/playlist" @click.native="checkhome = true">PlayList</router-link>
+      <router-link to="/exhibition" @click.native="checkhome = false">Exhibition</router-link>
     </nav>
     
     <router-view/>
