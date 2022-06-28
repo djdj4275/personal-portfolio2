@@ -14,8 +14,8 @@
   .search-wrapper {
       position: absolute;
       transform: translate(-50%, -50%);
-      top:30px;
-      right: 10px;
+      top:70px;
+      right: 0px;
   }
   /* 글이 작성될공간과 아이콘 감싸는 박스 */
   .search-wrapper .input-holder {    
@@ -369,4 +369,20 @@
   }
   button:focus + ul + div .design--6, button:hover + ul + div .design--6{
     top: -80px;
+  }
+  @media screen and (max-width: 1200px) {
+    .search-wrapper {
+      transform: translate(-20%, -60%);
+    }
+    .search-wrapper.active .input-holder {
+        width:300px;
+        height: 40px;
+    }
+    .search-wrapper.active .input-holder .search-icon {
+        width: 30px;
+        height:30px;
+    }
+    .search-wrapper.active .close {
+        right:-40px;
+    }
   }

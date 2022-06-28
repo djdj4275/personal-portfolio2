@@ -134,7 +134,7 @@ export default {
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/잘가라 구름아.mp3",
           url: "https://soundcloud.com/leebyounghyeon/9p93sjl9gzdb?ref=clipboard&p=i&c=0&si=030BCD62B0DE40E2A66C0965C9B45296&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
           favorited: false,
-          read : "안녕하세요1"
+          read : "잘 가라 구름아 널 닮은 구름아 난 같은 자리에 있지만 온 세상 돌아라 그 위에 하늘과 난 같은 자리에 있지만"
         },
         {
           name: "25시",
@@ -143,7 +143,7 @@ export default {
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/25시.mp3",
           url: "https://soundcloud.com/youaredifferent/25a?ref=clipboard&p=i&c=0&si=026DB4221CD243C291AB8E418D6933C2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
           favorited: true,
-          read : "안녕하세요2"
+          read : "난 밀린 잠을자 오랜만에 깨지않아서 밀린 잠을자 내 꿈이 오래기억나게 또 밀린 잠을 자는동안 내꿈이 이뤄지네 하루 반나절을 꿈속에 살고있어 어때"
         },
         {
           name: "Blah [W.Offmuseum] Prod.EARN",
@@ -152,7 +152,7 @@ export default {
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/Blah [W. Offmuseum] Prod. EARN.mp3",
           url: "https://soundcloud.com/041yeaheyeah/blah-w-offmuseum-prod-earn?ref=clipboard&p=i&c=0&si=CAA838915F35485FB52D365DDB818B63&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
           favorited: false,
-          read : "안녕하세요3"
+          read : "Tell me why Teach me 오늘도 난 술에 취해 묻고 싶었어 너를 지우려 해도 지워지지 않는걸 낯선 너의 향기와 그때 네 표정 내게 자꾸 맴돌아 하루는 먼데"
         },
         {
           name: "Loose",
@@ -161,7 +161,7 @@ export default {
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/Loose.mp3",
           url: "https://soundcloud.com/nodsgn/loose?ref=clipboard&p=i&c=0&si=2122A3F3C7C04983BF8030ECBAAA02B3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
           favorited: false,
-          read : "안녕하세요4"
+          read : "숨이 막혀 다시 한숨 뱉어봐도 모르겠어 마음이 어딜 가는지도 무너져 내려 매일 마다 그런 눈으로 보지마 무서워 스스로 상처 내는 게"
         },
         {
           name: "Love Me",
@@ -170,7 +170,7 @@ export default {
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/Love Me.mp3",
           url: "https://soundcloud.com/moodbymoonbow/love-me?ref=clipboard&p=i&c=0&si=A530B1921A8F4C9E9D57EDF98655C27E&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
           favorited: true,
-          read : "안녕하세요5"
+          read : "난 더 먼곳을 보며 다 똑같은 곳은 나오길 바래 너 또한 그랬으면 해 나와 같은곳을 보며 그곳에서 나오길 바래"
         },
         {
           name: "널 탓하기엔 나도 수동적인 사람",
@@ -179,7 +179,7 @@ export default {
           source: "https://raw.githubusercontent.com/djdj4275/source-file/master/노래/널 탓하기엔 나도 수동적인 사람.mp3",
           url: "https://soundcloud.com/6rwn/bsg8dugasw76?ref=clipboard&p=i&c=0&si=1D29AE63F5BA4001B0758775F65B5D78&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
           favorited: false,
-          read : "안녕하세요6"
+          read : "영혼을 씻어내려 긴장감은 반복 반복 무너진 건물에서 상처입은 팔을 뻗고 형식적인 말투 질투가 쌓여가"
         }]
         }
   },

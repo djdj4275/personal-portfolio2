@@ -61,7 +61,6 @@
 
             <div class="frontpage" id="page4">
               <div class="content-right picture2">
-                <h2>네 번째 페이지...</h2>
                 <span>This is third page...</span>
                 <label for="btn2" class="nbtn-front btn">O</label>
                 <div class="line front"></div>
@@ -85,10 +84,13 @@
                     세번째 페이지는 <span class="subject">제 플레이리스트</span>입니다. <br>
                     저는 예전부터 음악에 굉장히 관심이 많았습니다. <br>
                     때문에 학생시절 한 밴드의 보컬을 맡으며 <br>
-                    지역대회를 나가거나 보컬전공으로 예대진학을 한적이 있습니다. <br>
+                    지역대회를 나가거나 보컬전공으로 <br>
+                    예대진학을 한적이 있습니다. <br>
                     평소에는 장르 가리지않고 듣는편이지만  <br>
-                    최근 들어서는 사운드클라우드에 개개인들이 올린 음악들이나 <br>
-                    인디적 감성이 느껴지는 음악이 끌려 많이 듣고있습니다.
+                    최근 들어서는 사운드클라우드에 개개인들이 <br>
+                    올린 음악들이나 <br>
+                    인디적 감성이 느껴지는 음악이 끌려 <br>
+                    많이 듣고있습니다.
                   </span>
                 </div>
 

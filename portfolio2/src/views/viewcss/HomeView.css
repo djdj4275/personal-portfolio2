@@ -85,7 +85,7 @@
   }
   .nbtn-back:hover {
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
-    left: 40px;
+    left: 60px;
   }
   /* 각버튼 체크될시에 버튼 그림자 퍼지는 애니메이션 */
   #btn1:checked + input + input + div + #page2 div .nbtn-front {
@@ -127,7 +127,6 @@
     position: relative;
     width: 1200px;
     height: 500px;
-    top: 10%;
     perspective: 2000px;
     box-shadow: 0px 40px 35px black;
   }
@@ -142,7 +141,7 @@
   /* 타이핑이 일어날 박스 */
   .typing {
     margin: auto;
-    top: 120px;
+    top: 50px;
     position: absolute;
     width: 1200px;
     height: 200px;
@@ -242,14 +241,14 @@
   }
   .explanation3 {
     position: absolute;
-    top : 80px;
-    right: 80px;
+    top : 20px;
+    right: 120px;
     border-radius: 20px;
     padding: 20px;
     color: dodgerblue;
     background-color: rgba(0, 0, 0, 0.7);
     font-family: 'Nanum Myeongjo', serif;
-    line-height: 40px;
+    line-height: 35px;
   }
   .explanation4 {
     position: absolute;
@@ -304,6 +303,69 @@
   
   #btn3:checked + div + div + div + div + #page5 {
     z-index: 12 !important;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .home {
+        height: 800px;
+      }
+    .typingbox {
+        width: 800px;
+        height: 200px;
+        font-size: 30px;
+      }
+    #book {
+      width: 800px;
+      height: 500px;
+      top: 5%;
+    }
+    .firstpage {
+      width: 400px;
+      height: 100%;
+    }
+    .frontpage {
+      width: 400px;
+      height: 100%;
+    }
+    .backpage {
+      width: 400px;
+      height: 100%;
+    }
+    .explanation1 {
+      top : 70px;
+      left: 20px;
+      line-height: 40px;
+    }
+    .explanation2 {
+      top : 40px;
+      left: 70px;
+      padding: 20px 20px 10px 20px;
+      line-height: 30px;
+    }
+    .explanation3 {
+      top : 50px;
+      right: 25px;
+      border-radius: 20px;
+      padding: 20px;
+      line-height: 30px;
+    }
+    .explanation4 {
+      position: absolute;
+      top : 40px;
+      left: 70px;
+      border-radius: 20px;
+      padding: 20px 20px 10px 20px;
+      line-height: 30px;
+    }
+    .line {
+      width: 50px;
+    }
+    .nbtn-front:hover {
+      right: 20px;
+    }
+    .nbtn-back:hover {
+      left: 40px;
+    }
   }
   
   

@@ -45,6 +45,24 @@
   .router-link-exact-active {
     color: khaki;
   }
+  @media screen and (max-width: 1200px) {
+    a {
+      padding: 30px;
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 968px) {
+    a {
+      padding: 20px;
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    a {
+      padding: 15px;
+      font-size: 15px;
+    }
+  }
 </style>
 
 <script>
