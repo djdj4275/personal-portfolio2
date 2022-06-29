@@ -2,7 +2,7 @@
     <div class="test">
         <div class="container">
             <!-- store에 있는 위도,경도등의 값을 포함한 json파일로 전시회 카드 반복생성 -->
-            <div v-for="(m,i) in $store.getters.getCoordinate" :key="i">
+            <div class="cardBox" v-for="(m,i) in $store.getters.getCoordinate" :key="i">
                 <div :class="[`card`, `${m.card}`]">
                     <h2>{{m.title}}</h2>
                     <p>{{m.text}}</p>

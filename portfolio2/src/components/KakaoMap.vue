@@ -48,7 +48,14 @@ export default {
     height: 600px;
     border: 1px solid black;
     box-shadow: 5px 5px 10px gray;
+    transition: all 0.5s;
 } 
+@media screen and (max-width: 1024px) {
+    #map {
+        width: 300px;
+        height: 400px;
+    } 
+}
 </style>
 
 

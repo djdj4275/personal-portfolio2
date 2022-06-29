@@ -370,7 +370,7 @@
   button:focus + ul + div .design--6, button:hover + ul + div .design--6{
     top: -80px;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1400px) {
     .search-wrapper {
       transform: translate(-20%, -60%);
     }
@@ -385,4 +385,16 @@
     .search-wrapper.active .close {
         right:-40px;
     }
+  }
+  @media screen and (max-width: 1200px) {
+    .search-wrapper.active .input-holder {
+        width: 200px;
+        height: 40px;
+      }
+  }
+  @media screen and (max-width: 1200px) {
+    .search-wrapper.active .input-holder {
+        width: 170px;
+        height: 40px;
+      }
   }
