@@ -1,0 +1,29 @@
+[debug] [2022-06-30T00:06:15.900Z] ----------------------------------------------------------------------
+[debug] [2022-06-30T00:06:15.902Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2022-06-30T00:06:15.902Z] CLI Version:   11.1.0
+[debug] [2022-06-30T00:06:15.902Z] Platform:      win32
+[debug] [2022-06-30T00:06:15.902Z] Node Version:  v16.15.0
+[debug] [2022-06-30T00:06:15.903Z] Time:          Thu Jun 30 2022 09:06:15 GMT+0900 (대한민국 표준시)
+[debug] [2022-06-30T00:06:15.903Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-30T00:06:15.961Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-30T00:06:15.962Z] > authorizing via signed-in user (djdj4275@gmail.com)
+[debug] [2022-06-30T00:06:15.962Z] [iam] checking project personal-portfolio2 for permissions ["firebase.projects.get"]
+[debug] [2022-06-30T00:06:15.964Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-portfolio2:testIamPermissions [none]
+[debug] [2022-06-30T00:06:15.964Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-portfolio2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-06-30T00:06:16.995Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-portfolio2:testIamPermissions 200
+[debug] [2022-06-30T00:06:16.995Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/personal-portfolio2:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-06-30T00:06:16.996Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/personal-portfolio2 [none]
+[debug] [2022-06-30T00:06:17.358Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/personal-portfolio2 200
+[debug] [2022-06-30T00:06:17.358Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/personal-portfolio2 {"projectId":"personal-portfolio2","projectNumber":"531197069463","displayName":"personal-portfolio2","name":"projects/personal-portfolio2","resources":{"hostingSite":"personal-portfolio2"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from 'C:\Users\user\Desktop\personal-portfolio2\portfolio2'...
+[info] 
+[debug] [2022-06-30T00:06:17.361Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/personal-portfolio2/sites 
+[debug] [2022-06-30T00:06:18.710Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/personal-portfolio2/sites 200
+[debug] [2022-06-30T00:06:18.711Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/personal-portfolio2/sites {"sites":[{"name":"projects/personal-portfolio2/sites/personal-portfolio2","defaultUrl":"https://personal-portfolio2.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2022-06-30T00:06:18.711Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/personal-portfolio2/webApps/-/config [none]
+[debug] [2022-06-30T00:06:19.464Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/personal-portfolio2/webApps/-/config 200
+[debug] [2022-06-30T00:06:19.464Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/personal-portfolio2/webApps/-/config {"projectId":"personal-portfolio2","storageBucket":"personal-portfolio2.appspot.com","apiKey":"AIzaSyB1aWWpUfhvw2CIaVQ13yYPPhjH9N84uSs","authDomain":"personal-portfolio2.firebaseapp.com","messagingSenderId":"531197069463"}
+[info] i  hosting: Serving hosting files from: dist {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mdist\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
