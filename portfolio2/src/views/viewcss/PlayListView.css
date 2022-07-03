@@ -62,8 +62,8 @@
   }
   /* 음원 커버 오버레이 */
   .player-cover__item_overlay {
-    width: 120px;
-    height: 200px;
+    width: 150px;
+    height: 250px;
     border-radius: 15px;
     position: absolute;
     left: 80px;
@@ -73,7 +73,11 @@
     transition-delay: .5s;
     text-shadow: 4px 2px 2px rgba(50, 88, 130, 0.32);
     word-break: keep-all;
+    overflow: scroll;
   }
+    .player-cover__item_overlay::-webkit-scrollbar {
+      display: none;
+    }
   /* 입체감을 주기위한 before,after 컨텐츠 생성과 디자인 */
   .player-cover__item:before {
     content: "";

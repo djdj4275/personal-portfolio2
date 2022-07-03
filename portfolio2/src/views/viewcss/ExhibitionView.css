@@ -7,7 +7,8 @@
 /* test 컴포넌트 전체 div */
 .test {
     width: 100%;
-    height: 100vh;
+    height: auto;
+    min-height: 800px;
     overflow: hidden;
 }
 .container {
@@ -138,14 +139,13 @@ button{
     bottom: 14px;
     width: 30px;
     height: 30px;
-    background-color: darkblue;
-    color: white;
+    background-color: white;
+    color: blue;
     border: none;
     border-radius: 30px;
     cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
-    mix-blend-mode: hard-light;
 }
 /* 버튼 호버시의 디자인 */
 .card:hover button {
@@ -168,6 +168,10 @@ button{
     background-image: url("../../assets/그라운드시소서촌/1.jpg");
 }
 /* 카드별 버튼 디자인 변경 */
+.card1 button {
+    background-color: blue;
+    mix-blend-mode: multiply;
+}
 .card2 button {
     background-color: coral;
     mix-blend-mode: multiply;
@@ -197,7 +201,7 @@ button{
     transform: translate(-50%, -50%);
     width: 1000px;
     height: 600px;
-    background-color: white;
+    background-color: transparent;
     transition: all 0.5s;
 }
 /* 모달창 트랜지션 애니메이션 */
@@ -214,9 +218,10 @@ button{
 .kakaooff {
     width: 30px;
     height: 30px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: blue;
     top: 10px;
+    font-size: 20px;
 }
 /* 슬라이드쇼 전체 박스 */
 .slideShow { 
@@ -225,20 +230,23 @@ button{
     height: 600px;
     top: 0;
     right: 0;
-    background-color: antiquewhite;
+    background-color: rgb(27, 9, 115,0.8);
     display: flex;
     align-items: center;
     transition: all 0.5s;
+    transform-style: preserve-3d;
 }
 /* 슬라이드쇼 사진박스 */
 .slideShow_itembox {
     position: relative;
-    top: 0;
     width: 400px;
     height: 400px;
     background-color: black;
     overflow: hidden;
     margin: auto;
+    filter: drop-shadow(3px 3px 10px black);
+    border-radius: 20px;
+    perspective: 1000px;
 }
 /* 슬라이드쇼 ul */
 .slideShow_items {
@@ -272,32 +280,63 @@ button{
         width: 520px;
     }
     .white-bg {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 600px;
         height: 400px;
-        background-color: white;
     }
-    .slideShow { 
-        position: absolute;
+    .slideShow {
         width: 300px;
         height: 400px;
-        top: 0;
-        right: 0;
-        background-color: antiquewhite;
-        display: flex;
-        align-items: center;
     }
     /* 슬라이드쇼 사진박스 */
     .slideShow_itembox {
-        position: relative;
-        top: 0;
         width: 300px;
         height: 400px;
-        background-color: black;
-        overflow: hidden;
-        margin: auto;
+        border-radius: 0px;
+        filter: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .cardBox {
+        width: 400px;
+        margin: 10px;
+    }
+    .card {
+        width: 400px;
+        height: 150px;
+    }
+    .pic {
+        width: 300px;
+        height: 150px;
+    }
+    .white-bg {
+        width: 400px;
+        height: 300px;
+    }
+    .slideShow {
+        width: 200px;
+        height: 300px;
+    }
+    /* 슬라이드쇼 사진박스 */
+    .slideShow_itembox {
+        width: 200px;
+        height: 300px;
+    }
+    .slideShow_item {
+        width: 200px;
+        height: 300px;
+    }
+    .kakaooff {
+        width: 20px;
+        height: 20px;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+    }
+    button{
+        width: 20px;
+        height: 20px;
     }
 }

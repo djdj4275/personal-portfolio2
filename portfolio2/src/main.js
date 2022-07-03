@@ -11,7 +11,8 @@ import {
   faArrowUpRightFromSquare, 
   faForwardStep,
   faBackwardStep,
-  faLocationDot
+  faLocationDot,
+  faArrowRotateRight
   }
   from '@fortawesome/free-solid-svg-icons' 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -23,7 +24,8 @@ library.add(
   faArrowUpRightFromSquare,
   faForwardStep,
   faBackwardStep,
-  faLocationDot
+  faLocationDot,
+  faArrowRotateRight
   )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

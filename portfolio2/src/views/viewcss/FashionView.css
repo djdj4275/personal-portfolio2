@@ -8,7 +8,9 @@
 }
 /* 전체 카드들 display지정 */
 .about {
-    display: inline-block;
+    width: auto;
+    height: auto;
+    overflow: hidden;
   }
   /* 검색창 전체 박스 */
   .search-wrapper {
@@ -16,6 +18,24 @@
       transform: translate(-50%, -50%);
       top:70px;
       right: 0px;
+  }
+  /* 리셋 버튼 디자인 */
+  .resetBtn {
+    position: absolute;
+    right: 60px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: darkgray;
+    border-radius: 6px;
+    font-size: 15px;
+    color: gold;
+    cursor: pointer;
+    transition-duration: 0.5s;
+  }
+  .search-wrapper.active .resetBtn {
+    display: none;
   }
   /* 글이 작성될공간과 아이콘 감싸는 박스 */
   .search-wrapper .input-holder {    
@@ -26,6 +46,7 @@
       border-radius:6px;
       position: relative;
       transition: all 0.3s ease-in-out;
+      display: inline-block;
   }
   /* 활성화시에 박스 디자인 */
   .search-wrapper.active .input-holder {
@@ -179,7 +200,7 @@
     height: inherit;
     position: relative;
     transform-style: preserve-3d;
-    transition: .6s .1s;
+    transition-duration: 0.6s;
   }
   /* 카드에 호버시 또는 카드에 버튼 포커스시 상위요소인 카드가 돌아간 상태로 유지 */
   .flip-card-container:hover .flip-card,
@@ -392,9 +413,71 @@
         height: 40px;
       }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1024px) {
     .search-wrapper.active .input-holder {
         width: 170px;
         height: 40px;
-      }
+    }
   }
+  @media screen and (max-width: 768px) {
+    .search-wrapper .input-holder .search-icon {
+      width: 30px;
+      height:30px;
+    }
+    .search-wrapper.active .input-holder {
+        width: 100px;
+        height: 30px;
+    }
+    .search-wrapper.active .input-holder .search-icon {
+      height: 30px;
+      width: 30px;
+      top: 0;
+      right: 0;
+    }
+    .search-wrapper.active .input-holder .search-icon span::after {
+      width: 15px;
+      left: 5px;
+      border: 1px solid gold;
+    }
+    .search-wrapper.active .input-holder .search-icon span::before {
+      width: 15px;
+      left: 5px;
+      border: 1px solid gold;
+    }
+    .resetBtn {
+      width: 20px;
+      height: 20px;
+    }
+    .search-wrapper .input-holder .search-input {
+        height: 10px;
+        padding:0px 10px 0 10px;
+        font-size: 8px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .search-wrapper.active .close::before {
+      height: 8px;
+      left: -6px;
+      top: 22px;
+    }
+    .search-wrapper.active .close::after {
+      width: 15px;
+      height: 15px;
+      left: -12px;
+      top: 10px;
+    }
+    .search-wrapper .close {
+      top:20px;
+      right:0px;
+      width:20px;
+      height:20px;
+    }
+    .search-wrapper .close::after {
+      width: 10px;
+      height: 10px;
+      left: 0px;
+      top: 10px;
+    }
+  }
+
+    

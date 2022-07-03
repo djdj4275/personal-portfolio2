@@ -63,6 +63,12 @@
       font-size: 15px;
     }
   }
+  @media screen and (max-width: 480px) {
+    a {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
 </style>
 
 <script>
@@ -76,12 +82,17 @@ export default {
   computed : {
     // 라우터링크 클릭시 라우터별로 배경 사진 변화
     background() {
-    if (this.checkhome) {
-      return "url("+require("./assets/11.jpg")+")";
+      if (this.checkhome) {
+        return "url("+require("./assets/11.jpg")+")";
+      }
+      else {
+        return "url("+require("./assets/9.jpg")+")";
+      }
     }
-    else {
-      return "url("+require("./assets/9.jpg")+")";
-    }
+  },
+  mounted () {
+    if (window.location.pathname == "/fashion" || window.location.pathname == "/exhibition") {
+      this.checkhome = false;
     }
   }
 }

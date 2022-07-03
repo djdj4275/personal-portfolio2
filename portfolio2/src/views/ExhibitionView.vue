@@ -9,10 +9,10 @@
                     <div class="pic"></div>
                     <div class="dotline"></div>
                     <div class="social">
-                        <font-awesome-icon class="icon" @click="facebook" :icon="{ prefix: 'fab', iconName: 'facebook' }"/>
+                        <font-awesome-icon class="icon" @click="facebook(m.facebook)" :icon="{ prefix: 'fab', iconName: 'facebook' }"/>
                         <!-- 아이콘 클릭시 모달창을 열며 json안의 위도,경도값을 들고감 -->
                         <font-awesome-icon class="icon" @click="open(m.Lat,m.Lng,m.name)" icon="fa-solid fa-location-dot" />
-                        <font-awesome-icon class="icon" :icon="{ prefix: 'fab', iconName: 'instagram' }"/>
+                        <font-awesome-icon class="icon" @click="facebook(m.instagram)" :icon="{ prefix: 'fab', iconName: 'instagram' }"/>
                     </div>
                     <button></button>
                 </div>
@@ -40,7 +40,7 @@
                     <button @click="moveright" class="slideShow_right">&rang;</button>
                 </div>
 
-                <button @click="mapopen=false" class="kakaooff">X</button>
+                <button @click="mapopen=false" class="kakaooff">x</button>
             </div>
         </div>
         </transition>
@@ -67,11 +67,15 @@ export default {
         }
     },
     methods : {
-        facebook() {
-        window.open('https://naver.com');
+        facebook(facebook) {
+            window.open(facebook);
+        },
+        instagram(instagram) {
+            window.open(instagram);
         },
         // 함수 실행시 위도,경도를 데이터의 lat, lng에넣어주고, 모달창을 열어줌
         open(Lat,Lng,Name) {
+            console.log(window.innerWidth);
             this.mapopen=true;
             this.lat = Lat;
             this.lng = Lng;
@@ -80,7 +84,7 @@ export default {
         },
         // 함수실행시 slideshow에 접근하여 해당값만큼 픽셀이동
         moveSlide(num) {
-            this.$refs.slideshow.style.transform = `translateX(${-num * 400 + "px"})`;
+            this.$refs.slideshow.style.transform = `translateX(${-num * this.transXchange + "px"})`;
             currentIdx = num; 
         },
         // 왼쪽, 오른쪽 버튼 둘다 if조건문으로 첫장과 끝장일때 넘어가지않도록함
@@ -94,6 +98,16 @@ export default {
             }
         },
     },
+    computed : {
+        transXchange() {
+            if(window.innerWidth <= 480) {
+                return 200;
+            }
+            else {
+                return 400;
+            }
+        }
+    }
 }
 </script>
 

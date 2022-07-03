@@ -6,7 +6,9 @@
         "text" : "a lonely trip.",
         "Lat" : 35.1568,
         "Lng" : 129.1796,
-        "card" : "card1"
+        "card" : "card1",
+        "facebook" : "https://www.facebook.com/pages/%EC%A1%B0%ED%98%84%ED%99%94%EB%9E%91/453877647958573?rf=272213890081175",
+        "instagram" : "https://www.instagram.com/johyungallery/"
     },
     {
         "id" : 2,
@@ -15,7 +17,9 @@
         "text" : "a lonely trip.",
         "Lat" : 35.1667,
         "Lng" : 129.1371,
-        "card" : "card2"
+        "card" : "card2",
+        "facebook" : "https://ko-kr.facebook.com/artbusan/",
+        "instagram" : "https://www.instagram.com/busanmuseumofart/"
     },
     {
         "id" : 3,
@@ -24,7 +28,9 @@
         "text" : "a lonely trip.",
         "Lat" : 35.1093,
         "Lng" : 128.9428,
-        "card" : "card3"
+        "card" : "card3",
+        "facebook" : "https://www.facebook.com/busan.moca/",
+        "instagram" : "https://www.instagram.com/moca_busan/"
     },
     {
         "id" : 4,
@@ -33,6 +39,8 @@
         "text" : "a lonely trip.",
         "Lat" : 37.578057,
         "Lng" : 126.973115,
-        "card" : "card4"
+        "card" : "card4",
+        "facebook" : "https://www.facebook.com/%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C%EC%8B%9C%EC%86%8C-%EC%84%9C%EC%B4%8C-106268298240985/?ref=py_c",
+        "instagram" : "https://www.instagram.com/groundseesaw/"
     }
 ]

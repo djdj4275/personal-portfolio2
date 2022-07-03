@@ -56,6 +56,12 @@ export default {
         height: 400px;
     } 
 }
+@media screen and (max-width: 480px) {
+    #map {
+        width: 200px;
+        height: 300px;
+    } 
+}
 </style>
 
 

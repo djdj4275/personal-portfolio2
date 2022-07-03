@@ -54,7 +54,7 @@
     line-height: 30px;
     border : 1px solid black;
     border-radius: 50%;
-    right: 5%;
+    right: 50px;
     top: 45%;
     text-align: center;
     background-color: #000099;
@@ -70,7 +70,7 @@
     line-height: 30px;
     border : 1px solid black;
     border-radius: 50%;
-    left: 5%;
+    left: 50px;
     top: 45%;
     text-align: center;
     background-color: #000099;
@@ -321,15 +321,12 @@
     }
     .firstpage {
       width: 400px;
-      height: 100%;
     }
     .frontpage {
       width: 400px;
-      height: 100%;
     }
     .backpage {
       width: 400px;
-      height: 100%;
     }
     .explanation1 {
       top : 70px;
@@ -360,11 +357,249 @@
     .line {
       width: 50px;
     }
+    .nbtn-front {
+      right: 40px;
+    }
+    .nbtn-back {
+      left: 40px;
+    }
+    .nbtn-front:hover {
+      right: 30px;
+    }
+    .nbtn-back:hover {
+      left: 30px;
+    }
+  }
+  @media screen and (max-width: 1028px) {
+    .home {
+      height: 700px;
+    }
+  
+    .typingbox {
+      width: 700px;
+      height: 200px;
+      font-size: 30px;
+    }
+  
+    #book {
+      width: 700px;
+      height: 400px;
+      top: 5%;
+    }
+  
+    .firstpage {
+      width: 350px;
+    }
+  
+    .frontpage {
+      width: 350px;
+    }
+  
+    .backpage {
+      width: 350px;
+    }
+  
+    .explanation1 {
+      top: 30px;
+      font-size: 13px;
+    }
+  
+    .explanation2 {
+      top: 15px;
+      padding: 20px 20px 10px 20px;
+      line-height: 25px;
+      font-size: 13px;
+    }
+  
+    .explanation3 {
+      top: 20px;
+      right: 15px;
+      line-height: 25px;
+      font-size: 13px;
+    }
+  
+    .explanation4 {
+      top: 30px;
+      left: 60px;
+      padding: 20px;
+      line-height: 20px;
+      font-size: 13px;
+    }
+  
+    .line {
+      width: 40px;
+    }
+      
+    .nbtn-front {
+      right: 30px;
+    }
+  
+    .nbtn-back {
+      left: 30px;
+    }
+
+    .nbtn-front:hover {
+      right: 40px;
+    }
+  
+    .nbtn-back:hover {
+      left: 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .home {
+      height: 650px;
+    }
+  
+    .typingbox {
+      width: 600px;
+    }
+  
+    #book {
+      width: 600px;
+      height: 350px;
+    }
+  
+    .firstpage {
+      width: 300px;
+    }
+  
+    .frontpage {
+      width: 300px;
+    }
+  
+    .backpage {
+      width: 300px;
+    }
+  
+    .explanation1 {
+      line-height: 25px;
+    }
+  
+    .explanation2 {
+      padding: 20px;
+      left: 60px;
+      line-height: 20px;
+      font-size: 12px;
+    }
+  
+    .explanation3 {
+      top: 20px;
+      right: 10px;
+      font-size: 10px;
+      padding: 10px;
+    }
+  
+    .explanation4 {
+      top: 20px;
+      left: 50px;
+      font-size: 12px;
+    }
+  
+    .line {
+      width: 30px;
+    }
+      
+    .nbtn-front {
+      right: 20px;
+    }
+  
+    .nbtn-back {
+      left: 30px;
+    }
+
+    .nbtn-front:hover {
+      right: 30px;
+    }
+  
+    .nbtn-back:hover {
+      left: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .home {
+      height: 600px;
+    }
+  
+    .typingbox {
+      width: 300px;
+      font-size: 20px;
+    }
+  
+    #book {
+      width: 400px;
+      height: 350px;
+    }
+  
+    .firstpage {
+      width: 200px;
+    }
+  
+    .frontpage {
+      width: 200px;
+    }
+  
+    .backpage {
+      width: 200px;
+    }
+  
+    .subject {
+      font-size: 15px;
+    }
+
+    .explanation1 {
+      line-height: 20px;
+      font-size: 12px;
+    }
+  
+    .explanation2 {
+      padding: 15px;
+      left: 40px;
+      line-height: 15px;
+      font-size: 10px;
+    }
+  
+    .explanation3 {
+      width: 160px;
+      top: 10px;
+      right: 10px;
+      font-size: 10px;
+      line-height: 18px;
+      padding: 10px;
+    }
+  
+    .explanation4 {
+      top: 5px;
+      left: 30px;
+      font-size: 10px;
+      line-height: 18px;
+      padding: 8px;
+    }
+  
+    .line {
+      width: 20px;
+    }
+      
+    .nbtn-front {
+      right: 10px;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+    }
+  
+    .nbtn-back {
+      width: 25px;
+      height: 25px;
+      left: 20px;
+      line-height: 25px;
+    }
+
     .nbtn-front:hover {
       right: 20px;
     }
+  
     .nbtn-back:hover {
-      left: 40px;
+      left: 10px;
     }
   }
   
